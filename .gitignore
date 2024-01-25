@@ -1,0 +1,12 @@
+/target
+*.aux
+*.loa
+*.lof
+*.log
+*.lol
+*.lot
+*.out
+*.pdf
+*.tex
+*.toc
+.idea
