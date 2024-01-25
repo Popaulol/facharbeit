@@ -8,7 +8,10 @@ fn position_from_human_readable() {
     assert_eq!(Position::from_human_readable("a9"), None);
     assert_eq!(Position::from_human_readable("i3"), None);
     assert_eq!(Position::from_human_readable("z9"), None);
-    assert_eq!(Position::from_human_readable("a5").unwrap(), Position::new(0, 4));
+    assert_eq!(
+        Position::from_human_readable("a5").unwrap(),
+        Position::new(0, 4)
+    );
 
     round_trip_position("a1");
     round_trip_position("a2");
@@ -26,5 +29,10 @@ fn position_from_human_readable() {
 
 fn round_trip_position(case: &str) {
     let case = case.to_ascii_uppercase();
-    assert_eq!(case, Position::from_human_readable(&case).unwrap().to_human_readable())
+    assert_eq!(
+        case,
+        Position::from_human_readable(&case)
+            .unwrap()
+            .to_human_readable()
+    )
 }

@@ -5,18 +5,18 @@ pub struct Position {
 }
 
 impl Position {
-    pub(crate) fn new(file:i32, rank: i32) -> Self {
+    pub(crate) fn new(file: i32, rank: i32) -> Self {
         assert!((0..8).contains(&file));
         assert!((0..8).contains(&rank));
-        Self {
-            file, rank
-        }
+        Self { file, rank }
     }
 
     pub(crate) fn from_human_readable(position: &str) -> Option<Self> {
-        if !position.is_ascii() { None }
-            else if position.len() != 2 { None }
-        else {
+        if !position.is_ascii() {
+            None
+        } else if position.len() != 2 {
+            None
+        } else {
             let position = position.to_ascii_lowercase();
             let file = match position.chars().nth(0)? {
                 'a' => 0,
@@ -27,12 +27,10 @@ impl Position {
                 'f' => 5,
                 'g' => 6,
                 'h' => 7,
-                _ => {
-                    return None
-                }
+                _ => return None,
             };
 
-            let rank  = match position.chars().nth(1)? {
+            let rank = match position.chars().nth(1)? {
                 '1' => 0,
                 '2' => 1,
                 '3' => 2,
@@ -41,14 +39,10 @@ impl Position {
                 '6' => 5,
                 '7' => 6,
                 '8' => 7,
-                _ => {
-                    return None
-                }
+                _ => return None,
             };
 
-            Some(Self {
-                file, rank
-            })
+            Some(Self { file, rank })
         }
     }
 

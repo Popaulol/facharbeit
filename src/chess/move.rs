@@ -1,6 +1,6 @@
-use std::rc::Rc;
 use crate::chess::board::Board;
 use crate::chess::position::Position;
+use std::rc::Rc;
 
 struct Move {
     previous_move: Option<Rc<Move>>,

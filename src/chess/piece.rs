@@ -1,7 +1,5 @@
 use std::fmt;
 
-
-
 #[derive(Copy, Clone, Debug)]
 pub struct Piece {
     color: PieceColor,
@@ -11,23 +9,23 @@ pub struct Piece {
 
 impl fmt::Display for Piece {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{}", {match (self.color, self.kind) {
-            (PieceColor::White, PieceType::King) => " ♔ ︎",
-            (PieceColor::White, PieceType::Queen) => " ♕ ",
-            (PieceColor::White, PieceType::Rook) => " ♖︎ ",
-            (PieceColor::White, PieceType::Bishop) => " ♗︎ ",
-            (PieceColor::White, PieceType::Knight) => " ♘ ",
-            (PieceColor::White, PieceType::Pawn) => " ♙ ",
+        write!(f, "{}", {
+            match (self.color, self.kind) {
+                (PieceColor::White, PieceType::King) => " ♔ ︎",
+                (PieceColor::White, PieceType::Queen) => " ♕ ",
+                (PieceColor::White, PieceType::Rook) => " ♖︎ ",
+                (PieceColor::White, PieceType::Bishop) => " ♗︎ ",
+                (PieceColor::White, PieceType::Knight) => " ♘ ",
+                (PieceColor::White, PieceType::Pawn) => " ♙ ",
 
-            (PieceColor::Black, PieceType::King) => " ♚ ︎",
-            (PieceColor::Black, PieceType::Queen) => " ♛ ",
-            (PieceColor::Black, PieceType::Rook) => " ♜︎ ",
-            (PieceColor::Black, PieceType::Bishop) => " ♝ ︎",
-            (PieceColor::Black, PieceType::Knight) => " ♞ ",
-            (PieceColor::Black, PieceType::Pawn) => " ♟︎ ",
-        }
-        }
-        )
+                (PieceColor::Black, PieceType::King) => " ♚ ︎",
+                (PieceColor::Black, PieceType::Queen) => " ♛ ",
+                (PieceColor::Black, PieceType::Rook) => " ♜︎ ",
+                (PieceColor::Black, PieceType::Bishop) => " ♝ ︎",
+                (PieceColor::Black, PieceType::Knight) => " ♞ ",
+                (PieceColor::Black, PieceType::Pawn) => " ♟︎ ",
+            }
+        })
     }
 }
 
