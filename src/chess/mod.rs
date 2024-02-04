@@ -1,6 +1,6 @@
 pub mod board;
-mod r#move;
+pub(crate) mod r#move;
 mod piece;
-mod position;
+pub mod position;
 #[cfg(test)]
 mod tests;

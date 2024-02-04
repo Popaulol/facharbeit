@@ -1,0 +1,253 @@
+\documentclass[11pt, a4paper, oneside, openright]{article}
+\usepackage[dvips, bottom=15mm, top=15mm, right=4cm, left=2cm, bindingoffset=5mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\usepackage[babel, german=quotes]{csquotes}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage[tbtags]{mathtools}
+\usepackage{pgfplots}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{framed}
+\usepackage{mdframed}
+\usepackage{relsize}
+\usepackage{float} 
+\usepackage{pdfpages} 
+\usepackage{longtable}
+\usepackage[bottom]{footmisc}
+\usepackage{lipsum}
+\usepackage{blindtext}
+\usepackage{calligra}
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{xurl}
+\usepackage{microtype}
+\usepackage[font={scriptsize}, labelfont=bf, format=hang]{caption}
+\usepackage[font={scriptsize}, labelfont=bf, labelformat=simple]{subcaption}
+\renewcommand{\thesubfigure}{\,(\alph{subfigure})} 
+\usepackage[linesnumbered, commentsnumbered, boxed, german]{algorithm2e}
+\renewcommand{\listalgorithmcfname}{Algorithmenverzeichnis}
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Quelltext} 
+\renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
+
+
+
+% Hyperref-Setup (Verweise sind verlinkt, sodass an die korrekte Stelle gesprungen wird)
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    pdfpagelabels,
+    pdfstartview = FitH,
+    bookmarksopen = true,
+    bookmarksnumbered = true,
+    linkcolor = black,
+    plainpages = false,
+    hypertexnames = false,
+    citecolor = black,
+}
+\usepackage{setspace}
+\setstretch{1.5}
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+\pdfimageresolution=4000
+
+
+
+% Abkürzungen
+\newcommand \ggfs{ggfs.\xspace }
+\newcommand \zB{z.\,B.\xspace }
+\newcommand \sieheoben{s.\,o.\xspace }
+\newcommand \siehe{s.\xspace }
+\newcommand \dasheisst{d.\,h.\xspace }
+\newcommand \ua{u.\,a.\xspace }
+\newcommand \ia{i.\,a.\xspace }
+\newcommand \idR{i.\,d.\,R.\xspace }
+\newcommand \bspw{bspw.\xspace }
+\newcommand \bzw{bzw.\xspace }
+\newcommand \evtl{evtl.\xspace }
+\newcommand \bzgl{bzgl.\xspace }
+\newcommand \und{u.\xspace }
+\newcommand \vgl{vgl.\xspace }
+\newcommand \usw{u.\,s.\,w.\xspace }
+\newcommand \insbes{insbes.\xspace }
+\newcommand \etc{etc.\xspace }
+\newcommand \sog{sog.\xspace }
+\newcommand \ca{ca.\xspace }
+\newcommand \zT{z.\,T.\xspace }
+\newcommand \so{s.\,o.\xspace }
+\newcommand \etal{et.\,al.\xspace }
+\newcommand \ebd{ebd.\xspace }
+\newcommand \ebdS{ebd.\,S.\,}
+\newcommand \va{v.\,a.\xspace }
+\newcommand \vglebd{vgl.\,ebd.\xspace }
+\newcommand \vglebdS{vgl.\,ebd.\,S.\,}
+\newcommand \Seite{S.\,}
+\newcommand \Kap{Kap.\xspace }
+\newcommand \Abb{Abb.\xspace }
+\newcommand \jew{jew.\xspace }
+\newcommand \versch{versch.\xspace }
+\newcommand \engl{engl.\xspace }
+\newcommand \EF{EF\xspace }
+\newcommand \UVH{UVH\xspace }
+\newcommand \Abs{Abs.\,}
+\newcommand \wahrsch{wahrsch.\xspace }
+\newcommand \Zeile{Z.\,}
+\newcommand{\RM}[1]{\MakeUppercase{\romannumeral #1{}}}
+
+
+
+% Farben (in RGB definiert)
+\usepackage{xcolor}
+\usepackage{colortbl}
+\definecolor{dunkelgrau}{rgb}{0.75,0.75,0.75}
+\definecolor{mittelgrau}{rgb}{0.85,0.85,0.85}
+\definecolor{hellgrau}{rgb}{0.95,0.95,0.95}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
+\definecolor{lightblue}{rgb}{0.68, 0.85, 0.9}
+\definecolor{lightgreen}{rgb}{0.56, 0.93, 0.56}
+
+
+
+% Quelltext-Umgebung fü Java definieren:
+\newcommand\javastyle{\lstset{
+    language=Java,
+    otherkeywords={},
+    keywordstyle=\color{deepblue},
+    emph={},          
+    emphstyle=\color{deepred},
+    stringstyle=\color{deepgreen},
+    commentstyle=\color{orange},    
+    frame=,
+    showstringspaces=false,
+    showtabs=true,
+    tabsize=3,
+    tab=,
+    showstringspaces=true,
+    numbers=left,
+    breakatwhitespace=true,
+    breakatwhitespace = true,
+    breakindent = 2ex,
+    extendedchars=true,
+    breaklines=true,
+    numberstyle=\tiny,
+    numbersep=9pt,
+    stepnumber=1,
+    captionpos=b,
+    backgroundcolor=\color{hellgrau}
+}}
+
+
+
+% Zwei verschiedene Textgrößen definieren
+
+% a) für den Fließtext
+\newcommand\javastyleTextgroesseNormal{\lstset{
+    basicstyle=\ttfamily\mdseries\color{black}\linespread{0.8}
+}}
+
+% b) für längere Zitate
+\newcommand\javastyleTextgroesseKlein{\lstset{
+    basicstyle=\scriptsize\ttfamily\mdseries\color{black}\linespread{0.8}
+}}
+
+% "Java" als neue Umgebung definieren
+\lstnewenvironment{java}[1][]{\javastyle\javastyleTextgroesseKlein\lstset{#1}}{}
+
+% Java-Umgebung für externe Dateien definieren
+\newcommand\javaexternal[2][]{{\javastyle\javastyleTextgroesseKlein\lstinputlisting[#1]{#2}}}
+
+% Java-Code im Fließtext
+\newcommand\javainline[1]{{\javastyle\javastyleTextgroesseNormal\lstinline!#1!}}
+
+
+
+% Titel und Autor
+% Stichworte beim hyperref-Setup ändern!
+\title{Der Algorithmus >>Minimax<< und seine Anwendung auf das Schachspiel}
+\author{Paul Fragemann}
+\date{Version: \today}
+
+\makeatletter
+\hypersetup{
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfsubject={Facharbeit, Quicksort, Liste, Algorithmus, Implementation} % hier Stichworte ändern
+}
+\makeatother
+
+
+
+% ACHTUNG!
+% Vor dem Ausdruck auskommentieren
+% Das Paket kann helfen, Fehler in Verweisen aufzudecken
+% \usepackage{refcheck}
+
+% Das Paket kann helfen, zu lange Zeilen zu entdecken
+% \usepackage{showframe}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%                  %%%%%%%
+%%%%%%%   ENDE PRÄAMEL   %%%%%%%
+%%%%%%%                  %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\vfill
+
+\noindent
+\begin{tabular}{p{4cm}l}
+    Fach:                   & Informatik \tabularnewline
+    Kurs:                   & Q1 GK 1 \tabularnewline
+    Betreuender Lehrer:     & Herr Hendler \tabularnewline
+    Themenausgabe:          & 02. Februar 2024 \tabularnewline
+    Abgabe:                 & TODO: ADD THE DATE FUCKER \tabularnewline
+\end{tabular}
+
+
+
+
+
+\newpage
+
+\thispagestyle{empty}
+\pdfbookmark[1]{Inhaltsverzeichnis}{Inhaltsverzeichnis} 
+\tableofcontents
+
+
+
+\newpage
+\setcounter{page}{3}
+\section{Einleitung}
+guten morgen hallo leute, geht es euch denn gut?  und funktioniert hier auch alles?
+
+\newpage
+\section{Ausleitung}
+Funktionieren die verfickten Seitenzahlen endlich richtig??!?!?!
+
+
+\end{document}

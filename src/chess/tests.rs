@@ -25,6 +25,16 @@ fn position_from_human_readable() {
     round_trip_position("h3");
     round_trip_position("h2");
     round_trip_position("f5");
+    round_trip_position("h5");
+    round_trip_position("d6");
+    round_trip_position("e3");
+    round_trip_position("f8");
+    round_trip_position("a1");
+    round_trip_position("c5");
+    round_trip_position("d5");
+    round_trip_position("g7");
+    round_trip_position("b7");
+    round_trip_position("d7");
 }
 
 fn round_trip_position(case: &str) {

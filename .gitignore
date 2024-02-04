@@ -7,6 +7,6 @@
 *.lot
 *.out
 *.pdf
-*.tex
 *.toc
 .idea
+engine-interface.txt

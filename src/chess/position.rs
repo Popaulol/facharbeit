@@ -1,11 +1,11 @@
-#[derive(PartialEq, Debug)]
+#[derive(PartialEq, Debug, Clone, Copy)]
 pub struct Position {
-    file: i32,
-    rank: i32,
+    file: usize,
+    rank: usize,
 }
 
 impl Position {
-    pub(crate) fn new(file: i32, rank: i32) -> Self {
+    pub(crate) fn new(file: usize, rank: usize) -> Self {
         assert!((0..8).contains(&file));
         assert!((0..8).contains(&rank));
         Self { file, rank }
@@ -75,5 +75,13 @@ impl Position {
             }
         };
         format!("{}{}", file, rank)
+    }
+
+    pub(crate) fn file(&self) -> usize {
+        self.file
+    }
+
+    pub(crate) fn rank(&self) -> usize {
+        self.rank
     }
 }
