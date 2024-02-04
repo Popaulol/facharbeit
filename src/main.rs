@@ -4,6 +4,7 @@ use clap::{Parser, Subcommand};
 
 mod chess;
 mod cli;
+mod uci;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -25,21 +26,12 @@ enum Commands {
 
 fn main() {
     let cli = CLI::parse();
-    println!("{:?}", cli);
 
-    let start = Move::nop_move();
-    let first_move = Move::new(
-        start.clone(),
-        Position::from_human_readable("e2").unwrap(),
-        Position::from_human_readable("e4").unwrap(),
-    );
-    let second_move = Move::new(
-        first_move.clone(),
-        Position::from_human_readable("e7").unwrap(),
-        Position::from_human_readable("e5").unwrap(),
-    );
+    let command = cli.command.unwrap_or(Commands::UCI);
 
-    println!("{}", start.board);
-    println!("{}", first_move.board);
-    println!("{}", second_move.board)
+    match command {
+        Commands::CLI => cli::cli_main(),
+        Commands::TwoPlayer => cli::two_players().unwrap(),
+        Commands::UCI => uci::uci_main(),
+    }
 }

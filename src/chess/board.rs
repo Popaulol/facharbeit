@@ -37,6 +37,12 @@ fn piece_rank(color: PieceColor) -> [Option<Piece>; 8] {
 #[derive(Debug, Copy, Clone)]
 pub struct Board {
     board: [[Option<Piece>; 8]; 8],
+    white_en_passant: [bool; 8],
+    black_en_passant: [bool; 8],
+    white_castle_king: bool,
+    white_castle_queen: bool,
+    black_castle_king: bool,
+    black_castle_queen: bool,
 }
 
 impl Default for Board {
@@ -52,6 +58,12 @@ impl Default for Board {
                 pawn_rank(PieceColor::Black),
                 piece_rank(PieceColor::Black),
             ],
+            white_en_passant: [false, false, false, false, false, false, false, false],
+            black_en_passant: [false, false, false, false, false, false, false, false],
+            white_castle_king: true,
+            white_castle_queen: true,
+            black_castle_king: true,
+            black_castle_queen: true
         }
     }
 }
@@ -86,8 +98,11 @@ impl fmt::Display for Board {
 }
 
 impl Board {
-    fn at(&self, p: Position) -> Option<Piece> {
+    pub(crate) fn at_pos(&self, p: Position) -> Option<Piece> {
         self.board[p.rank()][p.file()]
+    }
+    pub(crate) fn at(&self, file: usize, rank: usize) -> Option<Piece> {
+        self.at_pos(Position::new(file, rank))
     }
 
     fn set(&mut self, p: Position, piece: Option<Piece>) {
@@ -95,8 +110,16 @@ impl Board {
     }
 
     pub(crate) fn r#move(mut self, from: Position, to: Position) -> Self {
-        self.set(to, self.at(from));
+        self.set(to, self.at_pos(from));
         self.set(from, None);
         self
+    }
+
+    pub fn check_piece_pos(&self, p: Position) -> bool {
+        !self.at_pos(p).is_none()
+    }
+
+    pub fn check_piece(&self, file: usize, rank: usize) -> bool {
+        !self.at(file, rank).is_none()
     }
 }

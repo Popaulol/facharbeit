@@ -2,8 +2,8 @@ use std::fmt;
 
 #[derive(Copy, Clone, Debug)]
 pub struct Piece {
-    color: PieceColor,
-    kind: PieceType,
+    pub(crate) color: PieceColor,
+    pub(crate) kind: PieceType,
     has_moved: bool,
 }
 
@@ -39,10 +39,20 @@ impl Piece {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub enum PieceColor {
     Black,
     White,
+}
+
+impl PieceColor {
+    pub fn oposite(&self) -> PieceColor {
+        match self {
+            PieceColor::Black => PieceColor::White,
+            PieceColor::White => PieceColor::Black
+        }
+    }
+
 }
 
 #[derive(Copy, Clone, Debug)]
