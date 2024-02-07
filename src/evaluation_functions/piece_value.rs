@@ -9,7 +9,7 @@ pub fn color_piece_value(board: Board, color: Color) -> i32 {
     let rock_count = (board.pieces(Piece::Rook) & color_board).popcnt() as i32;
     let pawn_count = (board.pieces(Piece::Pawn) & color_board).popcnt() as i32;
 
-    queen_count * 9 + bishop_count * 3 + knight_count * 3 + rock_count * 5 + pawn_count * 1
+    queen_count * 9 + bishop_count * 3 + knight_count * 3 + rock_count * 5 + pawn_count
 }
 
 pub fn piece_value(board: Board) -> i32 {

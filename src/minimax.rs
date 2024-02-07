@@ -26,11 +26,9 @@ where
 
     if let Some(score) = score {
         score
+    } else if our_move {
+        evaluation_function(board)
     } else {
-        if our_move {
-            evaluation_function(board)
-        } else {
-            -evaluation_function(board)
-        }
+        -evaluation_function(board)
     }
 }

@@ -27,7 +27,7 @@ where
     thread::spawn(move || {
         let board = {
             let lock = state.lock().expect("Concurrency Error I guess");
-            lock.game.current_position().clone()
+            lock.game.current_position()
         };
         let depth: i32 = {
             let lock = state.lock().expect("Concurrency Error I guess");
