@@ -1,2 +1,1 @@
-pub(crate) fn cli_main() {
-}
+pub(crate) fn cli_main() {}

@@ -1,9 +1,9 @@
 use clap::{Parser, Subcommand};
 
 mod cli;
-mod uci;
-mod minimax;
 mod evaluation_functions;
+mod minimax;
+mod uci;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
