@@ -10,3 +10,5 @@
 *.toc
 .idea
 engine-interface.txt
+/games/
+/Test Tournament
