@@ -1,10 +1,9 @@
-use crate::chess::position::Position;
-use crate::chess::r#move::Move;
 use clap::{Parser, Subcommand};
 
-mod chess;
 mod cli;
 mod uci;
+mod minimax;
+mod evaluation_functions;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -18,8 +17,6 @@ struct CLI {
 enum Commands {
     /// Play against the engine on the Command Line
     CLI,
-    /// Play against another Person on the Command Lina
-    TwoPlayer,
     /// Run the engine in uci mode, this is the default behavior when no subcommand is supplied
     UCI,
 }
@@ -31,7 +28,6 @@ fn main() {
 
     match command {
         Commands::CLI => cli::cli_main(),
-        Commands::TwoPlayer => cli::two_players().unwrap(),
         Commands::UCI => uci::uci_main(),
     }
 }
