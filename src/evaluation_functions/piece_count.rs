@@ -1,4 +1,4 @@
-use chess::{Board, BoardStatus};
+use chess::{Board};
 
 pub fn piece_count(board: Board) -> f32 {
 

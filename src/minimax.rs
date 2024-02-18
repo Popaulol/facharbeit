@@ -1,5 +1,5 @@
-use std::cmp::max;
-use std::f64;
+
+
 use chess::{Board, BoardStatus, Color, MoveGen};
 
 pub fn minimax_ab<F>(board: Board, depth: i32, evaluation_function: F) -> f32

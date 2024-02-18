@@ -1,5 +1,5 @@
-use chess::{Board, BoardStatus, Color, Piece};
-use vampirc_uci::{Serializable, UciInfoAttribute, UciMessage};
+use chess::{Board, Color, Piece};
+
 
 pub fn color_piece_value(board: Board, color: Color) -> f32 {
     let color_board = board.color_combined(color);

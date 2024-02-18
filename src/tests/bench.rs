@@ -1,10 +1,10 @@
 #[allow(soft_unstable)]
 extern crate test;
-use test::{Bencher, black_box};
+use test::{Bencher};
 use chess::Board;
-use crate::evaluation_functions::piece_count::piece_count;
+
 use crate::evaluation_functions::piece_value::piece_value;
-use crate::minimax::{minimax_ab, minimax_alpha_beta, minimax_td, minimax_traditional};
+use crate::minimax::{minimax_ab, minimax_td};
 
 #[bench]
 fn bench_minimax_traditional(b: &mut Bencher) {

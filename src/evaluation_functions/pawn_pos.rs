@@ -1,4 +1,4 @@
-use chess::{Board, Color, EMPTY, Piece, Square};
+use chess::{Board, Color, Piece, Square};
 const PAWN_PREFERENCES: [f32; 64] = [
     f32::INFINITY, f32::INFINITY, f32::INFINITY, f32::INFINITY, f32::INFINITY, f32::INFINITY, f32::INFINITY, f32::INFINITY,
     10.0, 10.0, 10.0, 0.0, 10.0, 10.0, 10.0, 10.0,

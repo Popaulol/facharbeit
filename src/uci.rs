@@ -44,7 +44,7 @@ where
         let mut best_move: ChessMove = ChessMove::default();
         for m in moves {
             let score = minimax_ab(board.make_move_new(m), depth - 1, evaluation_function);
-            let score = if (board.side_to_move() == Color::White) {
+            let score = if board.side_to_move() == Color::White {
                 score
             } else { -score };
             if score > best_move_score {
