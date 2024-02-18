@@ -1,17 +1,21 @@
 use crate::evaluation_functions::piece_count::piece_count;
 use crate::evaluation_functions::piece_value::piece_value;
-use crate::minimax::minimax;
-use chess::{Board, ChessMove, Game, MoveGen};
+use crate::minimax::minimax_ab;
+use chess::{Board, ChessMove, Color, Game, MoveGen};
 use std::io::stderr;
 use std::io::Write;
 use std::str::FromStr;
 use std::sync::{Arc, Mutex};
 use std::{io, thread};
-use vampirc_uci::{parse, Serializable, UciMessage, UciOptionConfig};
+use vampirc_uci::{parse, Serializable, UciInfoAttribute, UciMessage, UciOptionConfig};
+use crate::evaluation_functions::attacks::attacks;
+use crate::evaluation_functions::pawn_pos::pawn_pos;
 
 enum EvalFunction {
     PieceCount,
     PieceValue,
+    Attacks,
+    Pawn_pos,
 }
 
 struct SharedState {
@@ -22,7 +26,7 @@ struct SharedState {
 
 fn run_engine_thread<F>(state: Arc<Mutex<SharedState>>, evaluation_function: F)
 where
-    F: Fn(Board) -> i32 + Copy + Send + Sync + 'static,
+    F: Fn(Board) -> f32 + Copy + Send + Sync + 'static,
 {
     thread::spawn(move || {
         let board = {
@@ -36,17 +40,24 @@ where
 
         let moves = MoveGen::new_legal(&board);
 
-        let mut best_move_score = i32::MIN;
+        let mut best_move_score = f32::NEG_INFINITY;
         let mut best_move: ChessMove = ChessMove::default();
         for m in moves {
-            let score = minimax(board.make_move_new(m), depth, true, evaluation_function);
-
+            let score = minimax_ab(board.make_move_new(m), depth - 1, evaluation_function);
+            let score = if (board.side_to_move() == Color::White) {
+                score
+            } else { -score };
             if score > best_move_score {
                 best_move = m;
                 best_move_score = score;
             }
         }
-
+        println!("{}", UciMessage::Info(vec![UciInfoAttribute::Score {
+            cp: Some(best_move_score as i32),
+            mate: None,
+            lower_bound: None,
+            upper_bound: None,
+        }]));
         println!(
             "{}",
             UciMessage::BestMove {
@@ -88,7 +99,7 @@ pub(crate) fn uci_main() {
                         UciMessage::Option(UciOptionConfig::Combo {
                             name: "EvalFunction".to_string(),
                             default: Some("piece_value".into()),
-                            var: vec!["piece_count".into(), "piece_value".into()],
+                            var: vec!["piece_count".into(), "piece_value".into(), "attacks".into(), "pawn_pos".into()],
                         })
                         .serialize()
                     );
@@ -137,6 +148,8 @@ pub(crate) fn uci_main() {
                             match value.clone().expect("This needs to have a value").as_str() {
                                 "piece_count" => EvalFunction::PieceCount,
                                 "piece_value" => EvalFunction::PieceValue,
+                                "attacks" => EvalFunction::Attacks,
+                                "pawn_pos" => EvalFunction::Pawn_pos,
                                 _ => {
                                     panic!("Unkown Eval Function {:?}", value)
                                 }
@@ -162,6 +175,8 @@ pub(crate) fn uci_main() {
                     match lock.eval_function {
                         EvalFunction::PieceCount => run_engine_thread(state.clone(), piece_count),
                         EvalFunction::PieceValue => run_engine_thread(state.clone(), piece_value),
+                        EvalFunction::Attacks => run_engine_thread(state.clone(), attacks),
+                        EvalFunction::Pawn_pos => run_engine_thread(state.clone(), pawn_pos),
                     };
                 }
                 UciMessage::Id { .. } => {}
