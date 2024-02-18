@@ -1,3 +1,5 @@
+use crate::evaluation_functions::attacks::attacks;
+use crate::evaluation_functions::pawn_pos::pawn_pos;
 use crate::evaluation_functions::piece_count::piece_count;
 use crate::evaluation_functions::piece_value::piece_value;
 use crate::minimax::minimax_ab;
@@ -8,8 +10,6 @@ use std::str::FromStr;
 use std::sync::{Arc, Mutex};
 use std::{io, thread};
 use vampirc_uci::{parse, Serializable, UciInfoAttribute, UciMessage, UciOptionConfig};
-use crate::evaluation_functions::attacks::attacks;
-use crate::evaluation_functions::pawn_pos::pawn_pos;
 
 enum EvalFunction {
     PieceCount,
@@ -46,18 +46,23 @@ where
             let score = minimax_ab(board.make_move_new(m), depth - 1, evaluation_function);
             let score = if board.side_to_move() == Color::White {
                 score
-            } else { -score };
+            } else {
+                -score
+            };
             if score > best_move_score {
                 best_move = m;
                 best_move_score = score;
             }
         }
-        println!("{}", UciMessage::Info(vec![UciInfoAttribute::Score {
-            cp: Some(best_move_score as i32),
-            mate: None,
-            lower_bound: None,
-            upper_bound: None,
-        }]));
+        println!(
+            "{}",
+            UciMessage::Info(vec![UciInfoAttribute::Score {
+                cp: Some(best_move_score as i32),
+                mate: None,
+                lower_bound: None,
+                upper_bound: None,
+            }])
+        );
         println!(
             "{}",
             UciMessage::BestMove {
@@ -99,7 +104,12 @@ pub(crate) fn uci_main() {
                         UciMessage::Option(UciOptionConfig::Combo {
                             name: "EvalFunction".to_string(),
                             default: Some("piece_value".into()),
-                            var: vec!["piece_count".into(), "piece_value".into(), "attacks".into(), "pawn_pos".into()],
+                            var: vec![
+                                "piece_count".into(),
+                                "piece_value".into(),
+                                "attacks".into(),
+                                "pawn_pos".into()
+                            ],
                         })
                         .serialize()
                     );

@@ -1,20 +1,17 @@
 #![feature(test)]
 
-use std::str::FromStr;
-use chess::{Board};
+use chess::Board;
 use clap::{Parser, Subcommand};
+use std::str::FromStr;
 
 use crate::evaluation_functions::pawn_pos::pawn_pos;
-
-
-
 
 mod cli;
 mod evaluation_functions;
 mod minimax;
-mod uci;
 #[cfg(test)]
 mod tests;
+mod uci;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -31,7 +28,7 @@ enum Commands {
     /// Run the engine in uci mode, this is the default behavior when no subcommand is supplied
     UCI,
     /// Run For testing
-    Test
+    Test,
 }
 
 fn main() {
@@ -43,7 +40,10 @@ fn main() {
         Commands::CLI => cli::cli_main(),
         Commands::UCI => uci::uci_main(),
         Commands::Test => {
-            let board = Board::from_str("r1bqk2r/2ppbppp/p1n2n2/1p2p3/4P3/1B3N2/PPPP1PPP/RNBQR1K1 b kq - 0 1").unwrap();
+            let board = Board::from_str(
+                "r1bqk2r/2ppbppp/p1n2n2/1p2p3/4P3/1B3N2/PPPP1PPP/RNBQR1K1 b kq - 0 1",
+            )
+            .unwrap();
             let swapped = board.null_move().unwrap();
             println!("{}", pawn_pos(Board::default()));
             println!("{}", pawn_pos(Board::default().null_move().unwrap()));
