@@ -51,9 +51,9 @@ where
             });
 
             let score = if board.side_to_move() == Color::White {
-                moves.fold(0. / 0., f32::max)
+                moves.fold(f32::NAN, f32::max)
             } else {
-                moves.fold(0. / 0., f32::min)
+                moves.fold(f32::NAN, f32::min)
             };
 
             if score.is_nan() {

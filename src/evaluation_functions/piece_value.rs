@@ -9,10 +9,9 @@ pub fn color_piece_value(board: Board, color: Color) -> f32 {
     let rock_count = (board.pieces(Piece::Rook) & color_board).popcnt() as f32;
     let pawn_count = (board.pieces(Piece::Pawn) & color_board).popcnt() as f32;
 
-    let ret =
-        queen_count * 9.0 + bishop_count * 3.0 + knight_count * 3.0 + rock_count * 5.0 + pawn_count;
+    
     //println!("{}", UciMessage::Info(vec![UciInfoAttribute::String(format!("{}", ret))]).serialize());
-    ret
+    queen_count * 9.0 + bishop_count * 3.0 + knight_count * 3.0 + rock_count * 5.0 + pawn_count
 }
 
 pub fn piece_value(board: Board) -> f32 {
