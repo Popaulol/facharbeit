@@ -1,4 +1,6 @@
-use chess::{Board, BoardStatus, Color, MoveGen};
+use chess::{Board, BoardStatus, Color, Game, MoveGen};
+use chess::Color::White;
+use vampirc_uci::Rule::switch;
 
 pub fn minimax_ab<F>(board: Board, depth: i32, evaluation_function: F) -> f32
 where
@@ -129,6 +131,81 @@ where
         BoardStatus::Stalemate => 0.0,
         BoardStatus::Checkmate => {
             if board.side_to_move() == Color::White {
+                f32::INFINITY
+            } else {
+                f32::NEG_INFINITY
+            }
+        }
+    }
+}
+/*
+function negamax(node, depth, α, β, color) is
+    if depth = 0 or node is a terminal node then
+        return color × the heuristic value of node
+
+    childNodes := generateMoves(node)
+    childNodes := orderMoves(childNodes)
+    value := −∞
+    foreach child in childNodes do
+        value := max(value, −negamax(child, depth − 1, −β, −α, −color))
+        α := max(α, value)
+        if α ≥ β then
+            break (* cut-off *)
+    return value
+ */
+const DRAW_VALUE: f32 = f32::MIN;
+
+pub fn negamax<F>(game: Game, depth: i32, evaluation_function: F) -> f32
+    where
+        F: Fn(Board) -> f32,
+        F: Copy,
+{
+    negamax_internal(
+        game,
+        depth,
+        f32::NEG_INFINITY,
+        f32::INFINITY,
+        evaluation_function
+    )
+}
+
+fn negamax_internal<F>(
+    game: Game,
+    depth: i32,
+    mut alpha: f32,
+    beta: f32,
+    evaluation_function: F,
+) -> f32
+    where
+        F: Fn(Board) -> f32,
+        F: Copy,
+{
+    if game.can_declare_draw() {
+        return DRAW_VALUE
+    }
+    match game.current_position().status() {
+        BoardStatus::Ongoing => {
+            if depth <= 0 {
+                return evaluation_function(game.current_position())
+            }
+
+            let mut value = f32::NEG_INFINITY;
+            let iterator = MoveGen::new_legal(&game.current_position());
+            for r#move in iterator {
+                let mut new_game = game.clone();
+                new_game.make_move(r#move);
+                value = value.max(-negamax_internal(new_game, depth - 1, -beta, -alpha, evaluation_function));
+                alpha = alpha.max(value);
+                if alpha >= beta {
+                    break
+                }
+            }
+
+            value
+        }
+        BoardStatus::Stalemate => DRAW_VALUE,
+        BoardStatus::Checkmate => {
+            if game.side_to_move() == Color::White {
                 f32::INFINITY
             } else {
                 f32::NEG_INFINITY
