@@ -22,7 +22,7 @@ mod uci;
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 #[command(propagate_version = true)]
-struct CLI {
+struct Cli {
     #[command(subcommand)]
     command: Option<Commands>,
 }
@@ -30,9 +30,9 @@ struct CLI {
 #[derive(Subcommand, Debug)]
 enum Commands {
     /// Play against the engine on the Command Line
-    CLI,
+    Cli,
     /// Run the engine in uci mode, this is the default behavior when no subcommand is supplied
-    UCI,
+    Uci,
     /// Run For testing
     Test,
 }
@@ -53,13 +53,13 @@ fn main() {
         prev(info);
     });
 
-    let cli = CLI::parse();
+    let cli = Cli::parse();
 
-    let command = cli.command.unwrap_or(Commands::UCI);
+    let command = cli.command.unwrap_or(Commands::Uci);
 
     match command {
-        Commands::CLI => cli::cli_main(),
-        Commands::UCI => uci::uci_main(),
+        Commands::Cli => cli::cli_main(),
+        Commands::Uci => uci::uci_main(),
         Commands::Test => {
             // uci::uci_main();
             let board = Board::from_str(
