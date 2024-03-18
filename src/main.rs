@@ -1,12 +1,12 @@
 #![feature(test)]
 #![feature(panic_update_hook)]
 
-use std::panic;
-use std::process::Command;
+use crate::evaluation_functions::attacks::{attacks, attacks_diff};
 use chess::{Board, ChessMove, Game, Square};
 use clap::{Parser, Subcommand};
+use std::panic;
+use std::process::Command;
 use std::str::FromStr;
-use crate::evaluation_functions::attacks::{attacks, attacks_diff};
 
 use crate::evaluation_functions::piece_tables::piece_tables;
 use crate::evaluation_functions::piece_value::piece_value;
@@ -41,8 +41,10 @@ pub fn message(s: &str) {
     Command::new("notify-send")
         .arg(std::process::id().to_string())
         .arg(s)
-        .spawn().unwrap().wait().unwrap();
-
+        .spawn()
+        .unwrap()
+        .wait()
+        .unwrap();
 }
 
 fn main() {
@@ -50,7 +52,7 @@ fn main() {
         message(info.to_string().as_str());
         prev(info);
     });
-    
+
     let cli = CLI::parse();
 
     let command = cli.command.unwrap_or(Commands::UCI);
@@ -73,21 +75,22 @@ fn main() {
             println!("{}", negamax(Game::new(), 4, attacks));
             println!("{}", negamax(Game::new(), 4, attacks_diff));
 
-
             let b1c3 = ChessMove::new(Square::B1, Square::C3, None);
             let c3b1 = ChessMove::new(Square::C3, Square::B1, None);
 
             let b8c6 = ChessMove::new(Square::B8, Square::C6, None);
             let c6b8 = ChessMove::new(Square::C6, Square::B8, None);
 
-            let mut game = Game::from_str("rnbqkbnr/pppp3p/6p1/4pp1Q/5P2/4P3/PPPP2PP/RNB1KBNR w KQkq - 0 4").unwrap();
-            
+            let mut game =
+                Game::from_str("rnbqkbnr/pppp3p/6p1/4pp1Q/5P2/4P3/PPPP2PP/RNB1KBNR w KQkq - 0 4")
+                    .unwrap();
+
             let eval_fn = attacks;
-            
+
             for i in 0..4 {
                 println!("0 {} {}", i, negamax(game.clone(), i, eval_fn));
             }
-            
+
             game.make_move(b1c3);
             game.make_move(b8c6);
             game.make_move(c3b1);
@@ -107,7 +110,7 @@ fn main() {
             }
 
             game.declare_draw();
-            
+
             println!("{}", piece_tables(Board::default()))
         }
     }

@@ -21,8 +21,8 @@ pub fn attacks(board: Board) -> f32 {
 
 pub fn attacks_diff(board: Board) -> f32 {
     let enemy_attacks = match board.null_move() {
-        None => { f32::INFINITY}
-        Some(enemy_board) => {attacks(enemy_board)}
+        None => f32::INFINITY,
+        Some(enemy_board) => attacks(enemy_board),
     };
     attacks(board) - enemy_attacks
 }

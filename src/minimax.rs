@@ -1,5 +1,5 @@
-use chess::{Board, BoardStatus, Color, Game, MoveGen};
 use chess::Color::White;
+use chess::{Board, BoardStatus, Color, Game, MoveGen};
 use vampirc_uci::Rule::switch;
 
 pub fn minimax_ab<F>(board: Board, depth: i32, evaluation_function: F) -> f32
@@ -156,16 +156,16 @@ function negamax(node, depth, α, β, color) is
 const DRAW_VALUE: f32 = f32::MIN;
 
 pub fn negamax<F>(game: Game, depth: i32, evaluation_function: F) -> f32
-    where
-        F: Fn(Board) -> f32,
-        F: Copy,
+where
+    F: Fn(Board) -> f32,
+    F: Copy,
 {
     negamax_internal(
         game,
         depth,
         f32::NEG_INFINITY,
         f32::INFINITY,
-        evaluation_function
+        evaluation_function,
     )
 }
 
@@ -176,17 +176,17 @@ fn negamax_internal<F>(
     beta: f32,
     evaluation_function: F,
 ) -> f32
-    where
-        F: Fn(Board) -> f32,
-        F: Copy,
+where
+    F: Fn(Board) -> f32,
+    F: Copy,
 {
     if game.can_declare_draw() {
-        return DRAW_VALUE
+        return DRAW_VALUE;
     }
     match game.current_position().status() {
         BoardStatus::Ongoing => {
             if depth <= 0 {
-                return evaluation_function(game.current_position())
+                return evaluation_function(game.current_position());
             }
 
             let mut value = f32::NEG_INFINITY;
@@ -194,10 +194,16 @@ fn negamax_internal<F>(
             for r#move in iterator {
                 let mut new_game = game.clone();
                 new_game.make_move(r#move);
-                value = value.max(-negamax_internal(new_game, depth - 1, -beta, -alpha, evaluation_function));
+                value = value.max(-negamax_internal(
+                    new_game,
+                    depth - 1,
+                    -beta,
+                    -alpha,
+                    evaluation_function,
+                ));
                 alpha = alpha.max(value);
                 if alpha >= beta {
-                    break
+                    break;
                 }
             }
 

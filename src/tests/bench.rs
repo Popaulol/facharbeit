@@ -6,7 +6,6 @@ use test::Bencher;
 use crate::evaluation_functions::piece_value::piece_value;
 use crate::minimax::{minimax_ab, minimax_td, negamax};
 
-
 #[bench]
 fn bench_minimax_traditional(b: &mut Bencher) {
     let board = Board::default();
@@ -39,6 +38,6 @@ fn bench_negamax(b: &mut Bencher) {
 fn bench_negamax_d6(b: &mut Bencher) {
     let board = Game::new();
     b.iter(|| {
-            negamax(board.clone(), 6, piece_value);
+        negamax(board.clone(), 6, piece_value);
     })
 }
