@@ -1,0 +1,193 @@
+     \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/1}
+         \caption{Schritt: 1}
+         \label{fig:minimax-visulisation-1}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/2}
+         \caption{Schritt: 2}
+         \label{fig:minimax-visulisation-2}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/3}
+         \caption{Schritt: 3}
+         \label{fig:minimax-visulisation-3}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/4}
+         \caption{Schritt: 4}
+         \label{fig:minimax-visulisation-4}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/5}
+         \caption{Schritt: 5}
+         \label{fig:minimax-visulisation-5}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/6}
+         \caption{Schritt: 6}
+         \label{fig:minimax-visulisation-6}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/7}
+         \caption{Schritt: 7}
+         \label{fig:minimax-visulisation-7}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/8}
+         \caption{Schritt: 8}
+         \label{fig:minimax-visulisation-8}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/9}
+         \caption{Schritt: 9}
+         \label{fig:minimax-visulisation-9}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/10}
+         \caption{Schritt: 10}
+         \label{fig:minimax-visulisation-10}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/11}
+         \caption{Schritt: 11}
+         \label{fig:minimax-visulisation-11}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/12}
+         \caption{Schritt: 12}
+         \label{fig:minimax-visulisation-12}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/13}
+         \caption{Schritt: 13}
+         \label{fig:minimax-visulisation-13}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/14}
+         \caption{Schritt: 14}
+         \label{fig:minimax-visulisation-14}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/15}
+         \caption{Schritt: 15}
+         \label{fig:minimax-visulisation-15}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/16}
+         \caption{Schritt: 16}
+         \label{fig:minimax-visulisation-16}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/17}
+         \caption{Schritt: 17}
+         \label{fig:minimax-visulisation-17}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/18}
+         \caption{Schritt: 18}
+         \label{fig:minimax-visulisation-18}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/19}
+         \caption{Schritt: 19}
+         \label{fig:minimax-visulisation-19}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/20}
+         \caption{Schritt: 20}
+         \label{fig:minimax-visulisation-20}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/21}
+         \caption{Schritt: 21}
+         \label{fig:minimax-visulisation-21}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/22}
+         \caption{Schritt: 22}
+         \label{fig:minimax-visulisation-22}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/23}
+         \caption{Schritt: 23}
+         \label{fig:minimax-visulisation-23}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/24}
+         \caption{Schritt: 24}
+         \label{fig:minimax-visulisation-24}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/25}
+         \caption{Schritt: 25}
+         \label{fig:minimax-visulisation-25}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/26}
+         \caption{Schritt: 26}
+         \label{fig:minimax-visulisation-26}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/27}
+         \caption{Schritt: 27}
+         \label{fig:minimax-visulisation-27}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/28}
+         \caption{Schritt: 28}
+         \label{fig:minimax-visulisation-28}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/29}
+         \caption{Schritt: 29}
+         \label{fig:minimax-visulisation-29}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/30}
+         \caption{Schritt: 30}
+         \label{fig:minimax-visulisation-30}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/31}
+         \caption{Schritt: 31}
+         \label{fig:minimax-visulisation-31}
+     \end{subfigure}
+          \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./assets/minimax_visualisation/32}
+         \caption{Schritt: 32}
+         \label{fig:minimax-visulisation-32}
+     \end{subfigure}
+     

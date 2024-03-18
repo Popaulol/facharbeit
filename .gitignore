@@ -9,6 +9,9 @@
 *.pdf
 *.toc
 .idea
+*.bcf
+*.bib
+facharbeit.run.xml
 engine-interface.txt
 /games/
 /Test Tournament
