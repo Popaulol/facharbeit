@@ -1,4 +1,4 @@
-use std::fmt::format;
+
 use std::io::stderr;
 use std::io::Write;
 use std::str::FromStr;
@@ -16,7 +16,7 @@ use crate::evaluation_functions::piece_tables::piece_tables;
 use crate::evaluation_functions::piece_value::piece_value;
 use crate::message;
 use crate::minimax::{minimax_ab, negamax};
-use crate::uci::EvalFunction::Combined;
+
 
 #[derive(Debug)]
 enum EvalFunction {
@@ -87,7 +87,7 @@ where
                     upper_bound: None,
                 }])
             );
-            if (best_move == ChessMove::default()) {
+            if best_move == ChessMove::default() {
                 message(
                     format!(
                         "{:?}\n{:?}\n{:?}",

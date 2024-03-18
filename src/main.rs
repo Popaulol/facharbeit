@@ -9,7 +9,7 @@ use std::process::Command;
 use std::str::FromStr;
 
 use crate::evaluation_functions::piece_tables::piece_tables;
-use crate::evaluation_functions::piece_value::piece_value;
+
 use crate::minimax::negamax;
 
 mod cli;
