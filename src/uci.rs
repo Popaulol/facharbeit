@@ -1,4 +1,3 @@
-
 use std::io::stderr;
 use std::io::Write;
 use std::str::FromStr;
@@ -16,7 +15,6 @@ use crate::evaluation_functions::piece_tables::piece_tables;
 use crate::evaluation_functions::piece_value::piece_value;
 use crate::message;
 use crate::minimax::{minimax_ab, negamax};
-
 
 #[derive(Debug)]
 enum EvalFunction {

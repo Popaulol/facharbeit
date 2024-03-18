@@ -1,6 +1,4 @@
-
 use chess::{Board, BoardStatus, Color, Game, MoveGen};
-
 
 pub fn minimax_ab<F>(board: Board, depth: i32, evaluation_function: F) -> f32
 where
