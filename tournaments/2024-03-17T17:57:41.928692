@@ -1,0 +1,19 @@
+Rank Name                          Elo     +/-   Games   Score    Draw 
+   1 "combined d1 use_nega=True"     nan     nan       0    nan%    nan% 
+   2 "attacks_diff d1 use_nega=True"     nan     nan       0    nan%    nan% 
+   3 "piece_tables d1 use_nega=True"     nan     nan       0    nan%    nan% 
+   4 "attacks d1 use_nega=True"     nan     nan       0    nan%    nan% 
+   5 "piece_value d1 use_nega=True"     nan     nan       0    nan%    nan% 
+   6 "piece_count d1 use_nega=True"     nan     nan       0    nan%    nan% 
+
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: "piece_count d1 use_nega=True"
+Player: "piece_value d1 use_nega=True"
+Player: "attacks d1 use_nega=True"
+Player: "piece_tables d1 use_nega=True"
+Player: "attacks_diff d1 use_nega=True"
+Player: "combined d1 use_nega=True"
+Warning: Cannot start engine "piece_count d1 use_nega=True":
+Cannot execute command: "/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit"
+Finished match

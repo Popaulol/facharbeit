@@ -1,0 +1,61 @@
+warning: unused import: `crate::evaluation_functions::piece_value::piece_value`
+  --> src/main.rs:12:5
+   |
+12 | use crate::evaluation_functions::piece_value::piece_value;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `chess::Color::White`
+ --> src/minimax.rs:2:5
+  |
+2 | use chess::Color::White;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `vampirc_uci::Rule::switch`
+ --> src/minimax.rs:3:5
+  |
+3 | use vampirc_uci::Rule::switch;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::fmt::format`
+ --> src/uci.rs:2:5
+  |
+2 | use std::fmt::format;
+  |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::uci::EvalFunction::Combined`
+  --> src/uci.rs:19:5
+   |
+19 | use crate::uci::EvalFunction::Combined;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unnecessary parentheses around `if` condition
+  --> src/uci.rs:86:16
+   |
+86 |             if (best_move == ChessMove::default()) {message(format!("{:?}\n{:?}\n{:?}", state.lock().unwrap(), best_move, MoveGen::new_legal(&board).len()).as_str());}
+   |                ^                                 ^
+   |
+   = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+   |
+86 -             if (best_move == ChessMove::default()) {message(format!("{:?}\n{:?}\n{:?}", state.lock().unwrap(), best_move, MoveGen::new_legal(&board).len()).as_str());}
+86 +             if best_move == ChessMove::default() {message(format!("{:?}\n{:?}\n{:?}", state.lock().unwrap(), best_move, MoveGen::new_legal(&board).len()).as_str());}
+   |
+
+warning: function `minimax_td` is never used
+  --> src/minimax.rs:25:8
+   |
+25 | pub fn minimax_td<F>(board: Board, depth: i32, evaluation_function: F) -> f32
+   |        ^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: function `minimax_traditional` is never used
+  --> src/minimax.rs:39:8
+   |
+39 | pub fn minimax_traditional<F>(board: Board, depth: i32, evaluation_function: F) -> f32
+   |        ^^^^^^^^^^^^^^^^^^^
+
+warning: `facharbeit` (bin "facharbeit") generated 8 warnings (run `cargo fix --bin "facharbeit"` to apply 6 suggestions)
+    Finished `release` profile [optimized] target(s) in 0.03s
