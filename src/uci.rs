@@ -57,12 +57,12 @@ where
             let lock = state.lock().expect("Concurrency Error I guess");
             lock.use_negamax
         };
-        
+
         let first_possible_moves: bool = {
             let lock = state.lock().expect("Concurrency Error I guess");
             lock.first_possible_moves
         };
-        
+
         if first_possible_moves {
             let mut moves = MoveGen::new_legal(&board);
             println!(
@@ -71,10 +71,9 @@ where
                     best_move: moves.next().unwrap(),
                     ponder: None,
                 }
-                    .serialize()
+                .serialize()
             );
-        }
-        else if !use_negamax {
+        } else if !use_negamax {
             //message("Nega", "false");
             let mut moves = MoveGen::new_legal(&board);
 
@@ -246,7 +245,7 @@ pub(crate) fn uci_main() {
                             name: "first_possible_moves".to_string(),
                             default: Some(false),
                         })
-                            .serialize()
+                        .serialize()
                     );
                     println!("{}", UciMessage::UciOk.serialize());
                 }
@@ -308,12 +307,12 @@ pub(crate) fn uci_main() {
                     }
                     "first_possible_moves" => {
                         let mut lock = state.lock().expect("Concurrency Error I guess");
-                        lock.first_possible_moves = match value.expect("This needs to have a value").as_str()
-                        {
-                            "true" => true,
-                            "false" => false,
-                            _ => panic!("invalid value"),
-                        };
+                        lock.first_possible_moves =
+                            match value.expect("This needs to have a value").as_str() {
+                                "true" => true,
+                                "false" => false,
+                                _ => panic!("invalid value"),
+                            };
                     }
                     _ => {
                         panic!("Unkown Option {}", name)
