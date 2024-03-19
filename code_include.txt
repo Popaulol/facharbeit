@@ -10,10 +10,6 @@
 \inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/minimax.rs}
 \newpage
 
-\subsubsection*{src/cli.rs}
-\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/cli.rs}
-\newpage
-
 \subsubsection*{src/evaluation\_functions/attacks.rs}
 \inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/evaluation_functions/attacks.rs}
 \newpage
