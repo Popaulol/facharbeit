@@ -58,12 +58,12 @@
 \PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
 \PYG{+w}{            }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{use\PYGZus{}negamax}
 \PYG{+w}{        }\PYG{p}{\PYGZcb{};}
-\PYG{+w}{        }
+
 \PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}: \PYG{k+kt}{bool} \PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
 \PYG{+w}{            }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}
 \PYG{+w}{        }\PYG{p}{\PYGZcb{};}
-\PYG{+w}{        }
+
 \PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{moves}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{MoveGen}::\PYG{n}{new\PYGZus{}legal}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{board}\PYG{p}{);}
 \PYG{+w}{            }\PYG{n+nf+fm}{println!}\PYG{p}{(}
@@ -72,10 +72,9 @@
 \PYG{+w}{                    }\PYG{n}{best\PYGZus{}move}: \PYG{n+nc}{moves}\PYG{p}{.}\PYG{n}{next}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{(),}
 \PYG{+w}{                    }\PYG{n}{ponder}: \PYG{n+nb}{None}\PYG{p}{,}
 \PYG{+w}{                }\PYG{p}{\PYGZcb{}}
-\PYG{+w}{                    }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
+\PYG{+w}{                }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
 \PYG{+w}{            }\PYG{p}{);}
-\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
-\PYG{+w}{        }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{o}{!}\PYG{n}{use\PYGZus{}negamax}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{o}{!}\PYG{n}{use\PYGZus{}negamax}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{            }\PYG{c+c1}{//message(\PYGZdq{}Nega\PYGZdq{}, \PYGZdq{}false\PYGZdq{});}
 \PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{moves}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{MoveGen}::\PYG{n}{new\PYGZus{}legal}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{board}\PYG{p}{);}
 
@@ -247,7 +246,7 @@
 \PYG{+w}{                            }\PYG{n}{name}: \PYG{l+s}{\PYGZdq{}first\PYGZus{}possible\PYGZus{}moves\PYGZdq{}}\PYG{p}{.}\PYG{n}{to\PYGZus{}string}\PYG{p}{(),}
 \PYG{+w}{                            }\PYG{n}{default}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{k+kc}{false}\PYG{p}{),}
 \PYG{+w}{                        }\PYG{p}{\PYGZcb{})}
-\PYG{+w}{                            }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
+\PYG{+w}{                        }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
 \PYG{+w}{                    }\PYG{p}{);}
 \PYG{+w}{                    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UciMessage}::\PYG{n}{UciOk}\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{());}
 \PYG{+w}{                }\PYG{p}{\PYGZcb{}}
@@ -309,12 +308,12 @@
 \PYG{+w}{                    }\PYG{p}{\PYGZcb{}}
 \PYG{+w}{                    }\PYG{l+s}{\PYGZdq{}first\PYGZus{}possible\PYGZus{}moves\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{                        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
-\PYG{+w}{                        }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{value}\PYG{p}{.}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}This needs to have a value\PYGZdq{}}\PYG{p}{).}\PYG{n}{as\PYGZus{}str}\PYG{p}{()}
-\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
-\PYG{+w}{                            }\PYG{l+s}{\PYGZdq{}true\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{,}
-\PYG{+w}{                            }\PYG{l+s}{\PYGZdq{}false\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{,}
-\PYG{+w}{                            }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{panic!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}invalid value\PYGZdq{}}\PYG{p}{),}
-\PYG{+w}{                        }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{                        }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{                            }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{value}\PYG{p}{.}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}This needs to have a value\PYGZdq{}}\PYG{p}{).}\PYG{n}{as\PYGZus{}str}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}true\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{,}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}false\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{,}
+\PYG{+w}{                                }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{panic!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}invalid value\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{                            }\PYG{p}{\PYGZcb{};}
 \PYG{+w}{                    }\PYG{p}{\PYGZcb{}}
 \PYG{+w}{                    }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{                        }\PYG{n+nf+fm}{panic!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Unkown Option \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{)}
