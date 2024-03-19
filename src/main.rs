@@ -12,7 +12,6 @@ use crate::evaluation_functions::piece_tables::piece_tables;
 
 use crate::minimax::negamax;
 
-mod cli;
 mod evaluation_functions;
 mod minimax;
 #[cfg(test)]
@@ -29,8 +28,6 @@ struct Cli {
 
 #[derive(Subcommand, Debug)]
 enum Commands {
-    /// Play against the engine on the Command Line
-    Cli,
     /// Run the engine in uci mode, this is the default behavior when no subcommand is supplied
     Uci,
     /// Run For testing
@@ -58,7 +55,6 @@ fn main() {
     let command = cli.command.unwrap_or(Commands::Uci);
 
     match command {
-        Commands::Cli => cli::cli_main(),
         Commands::Uci => uci::uci_main(),
         Commands::Test => {
             // uci::uci_main();
