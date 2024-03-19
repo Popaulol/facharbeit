@@ -32,6 +32,7 @@ struct SharedState {
     eval_function: EvalFunction,
     depth: i32,
     use_negamax: bool,
+    first_possible_moves: bool,
 }
 
 fn run_engine_thread<F>(state: Arc<Mutex<SharedState>>, evaluation_function: F)
@@ -56,7 +57,24 @@ where
             let lock = state.lock().expect("Concurrency Error I guess");
             lock.use_negamax
         };
-        if !use_negamax {
+        
+        let first_possible_moves: bool = {
+            let lock = state.lock().expect("Concurrency Error I guess");
+            lock.first_possible_moves
+        };
+        
+        if first_possible_moves {
+            let mut moves = MoveGen::new_legal(&board);
+            println!(
+                "{}",
+                UciMessage::BestMove {
+                    best_move: moves.next().unwrap(),
+                    ponder: None,
+                }
+                    .serialize()
+            );
+        }
+        else if !use_negamax {
             //message("Nega", "false");
             let mut moves = MoveGen::new_legal(&board);
 
@@ -167,6 +185,7 @@ pub(crate) fn uci_main() {
         eval_function: EvalFunction::PieceCount,
         depth: 3,
         use_negamax: false,
+        first_possible_moves: false,
     }));
     'input: loop {
         let mut buf = String::new();
@@ -220,6 +239,14 @@ pub(crate) fn uci_main() {
                             default: Some(false),
                         })
                         .serialize()
+                    );
+                    println!(
+                        "{}",
+                        UciMessage::Option(UciOptionConfig::Check {
+                            name: "first_possible_moves".to_string(),
+                            default: Some(false),
+                        })
+                            .serialize()
                     );
                     println!("{}", UciMessage::UciOk.serialize());
                 }
@@ -278,6 +305,15 @@ pub(crate) fn uci_main() {
                             _ => panic!("invalid value"),
                         };
                         // crate::message(file!(), lock.use_negamax.to_string().as_str());
+                    }
+                    "first_possible_moves" => {
+                        let mut lock = state.lock().expect("Concurrency Error I guess");
+                        lock.first_possible_moves = match value.expect("This needs to have a value").as_str()
+                        {
+                            "true" => true,
+                            "false" => false,
+                            _ => panic!("invalid value"),
+                        };
                     }
                     _ => {
                         panic!("Unkown Option {}", name)

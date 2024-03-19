@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{evaluation\PYGZus{}functions}::\PYG{n}{attacks}::\PYG{n}{attacks\PYGZus{}diff}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{evaluation\PYGZus{}functions}::\PYG{n}{piece\PYGZus{}tables}::\PYG{n}{piece\PYGZus{}tables}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{evaluation\PYGZus{}functions}::\PYG{n}{piece\PYGZus{}value}::\PYG{n}{piece\PYGZus{}value}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{chess}::\PYG{n}{Board}\PYG{p}{;}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{combined}\PYG{p}{(}\PYG{n}{board}: \PYG{n+nc}{Board}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{f32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{l+m+mf}{0.5}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{attacks\PYGZus{}diff}\PYG{p}{(}\PYG{n}{board}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{piece\PYGZus{}tables}\PYG{p}{(}\PYG{n}{board}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mf}{10.0}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{piece\PYGZus{}value}\PYG{p}{(}\PYG{n}{board}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

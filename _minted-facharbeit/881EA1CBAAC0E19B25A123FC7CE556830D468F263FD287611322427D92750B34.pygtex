@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{chess}::\PYG{n}{Board}\PYG{p}{;}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{piece\PYGZus{}count}\PYG{p}{(}\PYG{n}{board}: \PYG{n+nc}{Board}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{f32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{current\PYGZus{}side}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{board}\PYG{p}{.}\PYG{n}{color\PYGZus{}combined}\PYG{p}{(}\PYG{n}{board}\PYG{p}{.}\PYG{n}{side\PYGZus{}to\PYGZus{}move}\PYG{p}{()).}\PYG{n}{popcnt}\PYG{p}{()}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k+kt}{f32}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{other\PYGZus{}side}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{board}\PYG{p}{.}\PYG{n}{color\PYGZus{}combined}\PYG{p}{(}\PYG{o}{!}\PYG{n}{board}\PYG{p}{.}\PYG{n}{side\PYGZus{}to\PYGZus{}move}\PYG{p}{()).}\PYG{n}{popcnt}\PYG{p}{()}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k+kt}{f32}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+cm}{/*if (current\PYGZus{}side \PYGZhy{} other\PYGZus{}side) != 0 \PYGZob{}}
+\PYG{c+cm}{        println!(\PYGZdq{}\PYGZob{}\PYGZcb{} \PYGZob{}:?\PYGZcb{}\PYGZdq{}, current\PYGZus{}side \PYGZhy{} other\PYGZus{}side, board.side\PYGZus{}to\PYGZus{}move());}
+\PYG{c+cm}{    \PYGZcb{}*/}
+\PYG{+w}{    }\PYG{n}{current\PYGZus{}side}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{other\PYGZus{}side}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

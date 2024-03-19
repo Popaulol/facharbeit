@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{mod} \PYG{n+nn}{attacks}\PYG{p}{;}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{mod} \PYG{n+nn}{combined}\PYG{p}{;}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{mod} \PYG{n+nn}{piece\PYGZus{}count}\PYG{p}{;}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{mod} \PYG{n+nn}{piece\PYGZus{}tables}\PYG{p}{;}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{mod} \PYG{n+nn}{piece\PYGZus{}value}\PYG{p}{;}
+\end{Verbatim}

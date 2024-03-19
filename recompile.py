@@ -6,7 +6,7 @@ from watchdog.events import FileSystemEventHandler, FileSystemEvent
 
 class RecompileHandler(FileSystemEventHandler):
     def on_modified(self, event: FileSystemEvent | None) -> None:
-        os.system('pdflatex facharbeit.tex')
+        os.system('pdflatex -shell-escape facharbeit.tex')
 
 
 if __name__ == "__main__":

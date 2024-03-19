@@ -1,0 +1,1227 @@
+Started game 1 of 552 (piece_count d1 use_nega=True vs combined d4 use_nega=True)
+Started game 2 of 552 (combined d4 use_nega=True vs piece_count d1 use_nega=True)
+Started game 3 of 552 (piece_count d2 use_nega=True vs combined d3 use_nega=True)
+Started game 4 of 552 (combined d3 use_nega=True vs piece_count d2 use_nega=True)
+Started game 5 of 552 (piece_count d3 use_nega=True vs combined d2 use_nega=True)
+Started game 6 of 552 (combined d2 use_nega=True vs piece_count d3 use_nega=True)
+Started game 7 of 552 (piece_count d4 use_nega=True vs combined d1 use_nega=True)
+Started game 8 of 552 (combined d1 use_nega=True vs piece_count d4 use_nega=True)
+Started game 9 of 552 (piece_value d1 use_nega=True vs attacks_diff d4 use_nega=True)
+Started game 10 of 552 (attacks_diff d4 use_nega=True vs piece_value d1 use_nega=True)
+Started game 11 of 552 (piece_value d2 use_nega=True vs attacks_diff d3 use_nega=True)
+Started game 12 of 552 (attacks_diff d3 use_nega=True vs piece_value d2 use_nega=True)
+Started game 13 of 552 (piece_value d3 use_nega=True vs attacks_diff d2 use_nega=True)
+Started game 14 of 552 (attacks_diff d2 use_nega=True vs piece_value d3 use_nega=True)
+Started game 15 of 552 (piece_value d4 use_nega=True vs attacks_diff d1 use_nega=True)
+Started game 16 of 552 (attacks_diff d1 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 5 (piece_count d3 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 17 of 552 (attacks d1 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 4 (combined d3 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 18 of 552 (piece_tables d4 use_nega=True vs attacks d1 use_nega=True)
+Finished game 12 (attacks_diff d3 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 19 of 552 (attacks d2 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 7 (piece_count d4 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 20 of 552 (piece_tables d3 use_nega=True vs attacks d2 use_nega=True)
+Finished game 6 (combined d2 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 21 of 552 (attacks d3 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 13 (piece_value d3 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 22 of 552 (piece_tables d2 use_nega=True vs attacks d3 use_nega=True)
+Finished game 21 (attacks d3 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 23 of 552 (attacks d4 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 20 (piece_tables d3 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 24 of 552 (piece_tables d1 use_nega=True vs attacks d4 use_nega=True)
+Finished game 19 (attacks d2 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 25 of 552 (piece_count d1 use_nega=True vs combined d3 use_nega=True)
+Finished game 14 (attacks_diff d2 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 26 of 552 (combined d3 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 26 (combined d3 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 27 of 552 (combined d4 use_nega=True vs combined d2 use_nega=True)
+Finished game 16 (attacks_diff d1 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 28 of 552 (combined d2 use_nega=True vs combined d4 use_nega=True)
+Finished game 2 (combined d4 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 29 of 552 (piece_count d2 use_nega=True vs combined d1 use_nega=True)
+Finished game 8 (combined d1 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 30 of 552 (combined d1 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 15 (piece_value d4 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 31 of 552 (piece_count d3 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 1 (piece_count d1 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 32 of 552 (attacks_diff d4 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 30 (combined d1 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 33 of 552 (piece_count d4 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 29 (piece_count d2 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 34 of 552 (attacks_diff d3 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 27 (combined d4 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 35 of 552 (piece_value d1 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 18 (piece_tables d4 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 36 of 552 (attacks_diff d2 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 22 (piece_tables d2 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 37 of 552 (piece_value d2 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 35 (piece_value d1 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 38 of 552 (attacks_diff d1 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 36 (attacks_diff d2 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 39 of 552 (piece_value d3 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 10 (attacks_diff d4 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 40 of 552 (piece_tables d4 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 38 (attacks_diff d1 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 41 of 552 (piece_value d4 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 34 (attacks_diff d3 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 42 of 552 (piece_tables d3 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 17 (attacks d1 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 43 of 552 (attacks d1 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 40 (piece_tables d4 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 44 of 552 (piece_tables d2 use_nega=True vs attacks d1 use_nega=True)
+Finished game 32 (attacks_diff d4 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 45 of 552 (attacks d2 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 37 (piece_value d2 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 46 of 552 (piece_tables d1 use_nega=True vs attacks d2 use_nega=True)
+Finished game 43 (attacks d1 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 47 of 552 (attacks d3 use_nega=True vs attacks d4 use_nega=True)
+Finished game 44 (piece_tables d2 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 48 of 552 (attacks d4 use_nega=True vs attacks d3 use_nega=True)
+Finished game 46 (piece_tables d1 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 49 of 552 (piece_count d1 use_nega=True vs combined d2 use_nega=True)
+Finished game 31 (piece_count d3 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 50 of 552 (combined d2 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 3 (piece_count d2 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 51 of 552 (combined d3 use_nega=True vs combined d1 use_nega=True)
+Finished game 51 (combined d3 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 52 of 552 (combined d1 use_nega=True vs combined d3 use_nega=True)
+Finished game 50 (combined d2 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 53 of 552 (combined d4 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 45 (attacks d2 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 54 of 552 (attacks_diff d4 use_nega=True vs combined d4 use_nega=True)
+Finished game 49 (piece_count d1 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 55 of 552 (piece_count d2 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 41 (piece_value d4 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 56 of 552 (attacks_diff d3 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 56 (attacks_diff d3 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 57 of 552 (piece_count d3 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 11 (piece_value d2 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 58 of 552 (attacks_diff d2 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 39 (piece_value d3 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 59 of 552 (piece_count d4 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 57 (piece_count d3 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 60 of 552 (attacks_diff d1 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 28 (combined d2 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 61 of 552 (piece_value d1 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 58 (attacks_diff d2 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 62 of 552 (piece_tables d4 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 48 (attacks d4 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 63 of 552 (piece_value d2 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 60 (attacks_diff d1 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 64 of 552 (piece_tables d3 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 25 (piece_count d1 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 65 of 552 (piece_value d3 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 64 (piece_tables d3 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 66 of 552 (piece_tables d2 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 65 (piece_value d3 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 67 of 552 (piece_value d4 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 63 (piece_value d2 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 68 of 552 (piece_tables d1 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 66 (piece_tables d2 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 69 of 552 (attacks d1 use_nega=True vs attacks d4 use_nega=True)
+Finished game 59 (piece_count d4 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 70 of 552 (attacks d4 use_nega=True vs attacks d1 use_nega=True)
+Finished game 62 (piece_tables d4 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 71 of 552 (attacks d2 use_nega=True vs attacks d3 use_nega=True)
+Finished game 71 (attacks d2 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 72 of 552 (attacks d3 use_nega=True vs attacks d2 use_nega=True)
+Finished game 52 (combined d1 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 73 of 552 (piece_count d1 use_nega=True vs combined d1 use_nega=True)
+Finished game 54 (attacks_diff d4 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 74 of 552 (combined d1 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 73 (piece_count d1 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 75 of 552 (combined d2 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 9 (piece_value d1 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 76 of 552 (attacks_diff d4 use_nega=True vs combined d2 use_nega=True)
+Finished game 24 (piece_tables d1 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 77 of 552 (combined d3 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 72 (attacks d3 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 78 of 552 (attacks_diff d3 use_nega=True vs combined d3 use_nega=True)
+Finished game 74 (combined d1 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 79 of 552 (combined d4 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 55 (piece_count d2 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 80 of 552 (attacks_diff d2 use_nega=True vs combined d4 use_nega=True)
+Finished game 68 (piece_tables d1 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 81 of 552 (piece_count d2 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 76 (attacks_diff d4 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 82 of 552 (attacks_diff d1 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 82 (attacks_diff d1 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 83 of 552 (piece_count d3 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 81 (piece_count d2 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 84 of 552 (piece_tables d4 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 79 (combined d4 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 85 of 552 (piece_count d4 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 42 (piece_tables d3 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 86 of 552 (piece_tables d3 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 83 (piece_count d3 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 87 of 552 (piece_value d1 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 84 (piece_tables d4 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 88 of 552 (piece_tables d2 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 88 (piece_tables d2 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 89 of 552 (piece_value d2 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 87 (piece_value d1 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 90 of 552 (piece_tables d1 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 85 (piece_count d4 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 91 of 552 (piece_value d3 use_nega=True vs attacks d4 use_nega=True)
+Finished game 90 (piece_tables d1 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 92 of 552 (attacks d4 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 89 (piece_value d2 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 93 of 552 (piece_value d4 use_nega=True vs attacks d3 use_nega=True)
+Finished game 78 (attacks_diff d3 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 94 of 552 (attacks d3 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 86 (piece_tables d3 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 95 of 552 (attacks d1 use_nega=True vs attacks d2 use_nega=True)
+Finished game 80 (attacks_diff d2 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 96 of 552 (attacks d2 use_nega=True vs attacks d1 use_nega=True)
+Finished game 95 (attacks d1 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 97 of 552 (piece_count d1 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 93 (piece_value d4 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 98 of 552 (attacks_diff d4 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 96 (attacks d2 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 99 of 552 (combined d1 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 94 (attacks d3 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 100 of 552 (attacks_diff d3 use_nega=True vs combined d1 use_nega=True)
+Finished game 92 (attacks d4 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 101 of 552 (combined d2 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 47 (attacks d3 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 102 of 552 (attacks_diff d2 use_nega=True vs combined d2 use_nega=True)
+Finished game 101 (combined d2 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 103 of 552 (combined d3 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 61 (piece_value d1 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 104 of 552 (attacks_diff d1 use_nega=True vs combined d3 use_nega=True)
+Finished game 77 (combined d3 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 105 of 552 (combined d4 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 102 (attacks_diff d2 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 106 of 552 (piece_tables d4 use_nega=True vs combined d4 use_nega=True)
+Finished game 75 (combined d2 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 107 of 552 (piece_count d2 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 98 (attacks_diff d4 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 108 of 552 (piece_tables d3 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 103 (combined d3 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 109 of 552 (piece_count d3 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 100 (attacks_diff d3 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 110 of 552 (piece_tables d2 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 99 (combined d1 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 111 of 552 (piece_count d4 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 109 (piece_count d3 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 112 of 552 (piece_tables d1 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 108 (piece_tables d3 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 113 of 552 (piece_value d1 use_nega=True vs attacks d4 use_nega=True)
+Finished game 105 (combined d4 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 114 of 552 (attacks d4 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 107 (piece_count d2 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 115 of 552 (piece_value d2 use_nega=True vs attacks d3 use_nega=True)
+Finished game 110 (piece_tables d2 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 116 of 552 (attacks d3 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 116 (attacks d3 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 117 of 552 (piece_value d3 use_nega=True vs attacks d2 use_nega=True)
+Finished game 115 (piece_value d2 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 118 of 552 (attacks d2 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 114 (attacks d4 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 119 of 552 (piece_value d4 use_nega=True vs attacks d1 use_nega=True)
+Finished game 112 (piece_tables d1 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 120 of 552 (attacks d1 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 117 (piece_value d3 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 121 of 552 (piece_count d1 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 118 (attacks d2 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 122 of 552 (attacks_diff d3 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 106 (piece_tables d4 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 123 of 552 (attacks_diff d4 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 122 (attacks_diff d3 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 124 of 552 (attacks_diff d2 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 53 (combined d4 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 125 of 552 (combined d1 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 120 (attacks d1 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 126 of 552 (attacks_diff d1 use_nega=True vs combined d1 use_nega=True)
+Finished game 70 (attacks d4 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 127 of 552 (combined d2 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 125 (combined d1 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 128 of 552 (piece_tables d4 use_nega=True vs combined d2 use_nega=True)
+Finished game 119 (piece_value d4 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 129 of 552 (combined d3 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 126 (attacks_diff d1 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 130 of 552 (piece_tables d3 use_nega=True vs combined d3 use_nega=True)
+Finished game 129 (combined d3 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 131 of 552 (combined d4 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 131 (combined d4 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 132 of 552 (piece_tables d2 use_nega=True vs combined d4 use_nega=True)
+Finished game 128 (piece_tables d4 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 133 of 552 (piece_count d2 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 133 (piece_count d2 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 134 of 552 (piece_tables d1 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 134 (piece_tables d1 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 135 of 552 (piece_count d3 use_nega=True vs attacks d4 use_nega=True)
+Finished game 123 (attacks_diff d4 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 136 of 552 (attacks d4 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 132 (piece_tables d2 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 137 of 552 (piece_count d4 use_nega=True vs attacks d3 use_nega=True)
+Finished game 124 (attacks_diff d2 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 138 of 552 (attacks d3 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 121 (piece_count d1 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 139 of 552 (piece_value d1 use_nega=True vs attacks d2 use_nega=True)
+Finished game 97 (piece_count d1 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 140 of 552 (attacks d2 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 140 (attacks d2 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 141 of 552 (piece_value d2 use_nega=True vs attacks d1 use_nega=True)
+Finished game 141 (piece_value d2 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 142 of 552 (attacks d1 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 139 (piece_value d1 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 143 of 552 (piece_value d3 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 142 (attacks d1 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 144 of 552 (piece_value d4 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 138 (attacks d3 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 145 of 552 (piece_count d1 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 111 (piece_count d4 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 146 of 552 (attacks_diff d2 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 104 (attacks_diff d1 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 147 of 552 (attacks_diff d3 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 146 (attacks_diff d2 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 148 of 552 (attacks_diff d1 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 144 (piece_value d4 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 149 of 552 (attacks_diff d4 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 145 (piece_count d1 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 150 of 552 (piece_tables d4 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 143 (piece_value d3 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 151 of 552 (combined d1 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 23 (attacks d4 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 152 of 552 (piece_tables d3 use_nega=True vs combined d1 use_nega=True)
+Finished game 147 (attacks_diff d3 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 153 of 552 (combined d2 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 153 (combined d2 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 154 of 552 (piece_tables d2 use_nega=True vs combined d2 use_nega=True)
+Finished game 151 (combined d1 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 155 of 552 (combined d3 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 154 (piece_tables d2 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 156 of 552 (piece_tables d1 use_nega=True vs combined d3 use_nega=True)
+Finished game 127 (combined d2 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 157 of 552 (combined d4 use_nega=True vs attacks d4 use_nega=True)
+Finished game 113 (piece_value d1 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 158 of 552 (attacks d4 use_nega=True vs combined d4 use_nega=True)
+Finished game 130 (piece_tables d3 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 159 of 552 (piece_count d2 use_nega=True vs attacks d3 use_nega=True)
+Finished game 137 (piece_count d4 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 160 of 552 (attacks d3 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 159 (piece_count d2 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 161 of 552 (piece_count d3 use_nega=True vs attacks d2 use_nega=True)
+Finished game 160 (attacks d3 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Finished game 136 (attacks d4 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 162 of 552 (attacks d2 use_nega=True vs piece_count d3 use_nega=True)
+Started game 163 of 552 (piece_count d4 use_nega=True vs attacks d1 use_nega=True)
+Finished game 152 (piece_tables d3 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 164 of 552 (attacks d1 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 162 (attacks d2 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 165 of 552 (piece_value d1 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 161 (piece_count d3 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 166 of 552 (piece_value d4 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 164 (attacks d1 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 167 of 552 (piece_value d2 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 135 (piece_count d3 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 168 of 552 (piece_value d3 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 168 (piece_value d3 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 169 of 552 (piece_count d1 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 167 (piece_value d2 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 170 of 552 (attacks_diff d1 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 166 (piece_value d4 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 171 of 552 (attacks_diff d2 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 163 (piece_count d4 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 172 of 552 (piece_tables d4 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 170 (attacks_diff d1 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 173 of 552 (attacks_diff d3 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 156 (piece_tables d1 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 174 of 552 (piece_tables d3 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 173 (attacks_diff d3 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 175 of 552 (attacks_diff d4 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 149 (attacks_diff d4 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 176 of 552 (piece_tables d2 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 169 (piece_count d1 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 177 of 552 (combined d1 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 177 (combined d1 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 178 of 552 (piece_tables d1 use_nega=True vs combined d1 use_nega=True)
+Finished game 148 (attacks_diff d1 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 179 of 552 (combined d2 use_nega=True vs attacks d4 use_nega=True)
+Finished game 165 (piece_value d1 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 180 of 552 (attacks d4 use_nega=True vs combined d2 use_nega=True)
+Finished game 150 (piece_tables d4 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 181 of 552 (combined d3 use_nega=True vs attacks d3 use_nega=True)
+Finished game 171 (attacks_diff d2 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 182 of 552 (attacks d3 use_nega=True vs combined d3 use_nega=True)
+Finished game 178 (piece_tables d1 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 183 of 552 (combined d4 use_nega=True vs attacks d2 use_nega=True)
+Finished game 180 (attacks d4 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 184 of 552 (attacks d2 use_nega=True vs combined d4 use_nega=True)
+Finished game 172 (piece_tables d4 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 185 of 552 (piece_count d2 use_nega=True vs attacks d1 use_nega=True)
+Finished game 91 (piece_value d3 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 186 of 552 (attacks d1 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 185 (piece_count d2 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 187 of 552 (piece_count d3 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 174 (piece_tables d3 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 188 of 552 (piece_value d4 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 186 (attacks d1 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 189 of 552 (piece_count d4 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 175 (attacks_diff d4 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 190 of 552 (piece_value d3 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 158 (attacks d4 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 191 of 552 (piece_value d1 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 181 (combined d3 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 192 of 552 (piece_value d2 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 191 (piece_value d1 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 193 of 552 (piece_count d1 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 188 (piece_value d4 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 194 of 552 (piece_tables d4 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 192 (piece_value d2 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 195 of 552 (attacks_diff d1 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 195 (attacks_diff d1 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 196 of 552 (piece_tables d3 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 189 (piece_count d4 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 197 of 552 (attacks_diff d2 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 187 (piece_count d3 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 198 of 552 (piece_tables d2 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 197 (attacks_diff d2 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 199 of 552 (attacks_diff d3 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 196 (piece_tables d3 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 200 of 552 (piece_tables d1 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 198 (piece_tables d2 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 201 of 552 (attacks_diff d4 use_nega=True vs attacks d4 use_nega=True)
+Finished game 190 (piece_value d3 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 202 of 552 (attacks d4 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 182 (attacks d3 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 203 of 552 (combined d1 use_nega=True vs attacks d3 use_nega=True)
+Finished game 155 (combined d3 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 204 of 552 (attacks d3 use_nega=True vs combined d1 use_nega=True)
+Finished game 204 (attacks d3 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 205 of 552 (combined d2 use_nega=True vs attacks d2 use_nega=True)
+Finished game 183 (combined d4 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 206 of 552 (attacks d2 use_nega=True vs combined d2 use_nega=True)
+Finished game 184 (attacks d2 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 207 of 552 (combined d3 use_nega=True vs attacks d1 use_nega=True)
+Finished game 205 (combined d2 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 208 of 552 (attacks d1 use_nega=True vs combined d3 use_nega=True)
+Finished game 207 (combined d3 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 209 of 552 (combined d4 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 206 (attacks d2 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 210 of 552 (piece_value d4 use_nega=True vs combined d4 use_nega=True)
+Finished game 194 (piece_tables d4 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 211 of 552 (piece_count d2 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 203 (combined d1 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 212 of 552 (piece_value d3 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 212 (piece_value d3 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 213 of 552 (piece_count d3 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 199 (attacks_diff d3 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 214 of 552 (piece_value d2 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 213 (piece_count d3 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 215 of 552 (piece_count d4 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 211 (piece_count d2 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 216 of 552 (piece_value d1 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 214 (piece_value d2 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 217 of 552 (piece_count d1 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 215 (piece_count d4 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 218 of 552 (piece_tables d3 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 200 (piece_tables d1 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 219 of 552 (piece_tables d4 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 217 (piece_count d1 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 220 of 552 (piece_tables d2 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 208 (attacks d1 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 221 of 552 (attacks_diff d1 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 210 (piece_value d4 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 222 of 552 (piece_tables d1 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 216 (piece_value d1 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 223 of 552 (attacks_diff d2 use_nega=True vs attacks d4 use_nega=True)
+Finished game 209 (combined d4 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 224 of 552 (attacks d4 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 222 (piece_tables d1 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 225 of 552 (attacks_diff d3 use_nega=True vs attacks d3 use_nega=True)
+Finished game 218 (piece_tables d3 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 226 of 552 (attacks d3 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 219 (piece_tables d4 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 227 of 552 (attacks_diff d4 use_nega=True vs attacks d2 use_nega=True)
+Finished game 221 (attacks_diff d1 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 228 of 552 (attacks d2 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 220 (piece_tables d2 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 229 of 552 (combined d1 use_nega=True vs attacks d1 use_nega=True)
+Finished game 157 (combined d4 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 230 of 552 (attacks d1 use_nega=True vs combined d1 use_nega=True)
+Finished game 229 (combined d1 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 231 of 552 (combined d2 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 230 (attacks d1 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 232 of 552 (piece_value d4 use_nega=True vs combined d2 use_nega=True)
+Finished game 225 (attacks_diff d3 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 233 of 552 (combined d3 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 224 (attacks d4 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 234 of 552 (piece_value d3 use_nega=True vs combined d3 use_nega=True)
+Finished game 69 (attacks d1 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 235 of 552 (combined d4 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 232 (piece_value d4 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 236 of 552 (piece_value d2 use_nega=True vs combined d4 use_nega=True)
+Finished game 233 (combined d3 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 237 of 552 (piece_count d2 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 227 (attacks_diff d4 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 238 of 552 (piece_value d1 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 237 (piece_count d2 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 239 of 552 (piece_count d3 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 231 (combined d2 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 240 of 552 (piece_count d4 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 238 (piece_value d1 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 241 of 552 (piece_count d1 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 240 (piece_count d4 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 242 of 552 (piece_tables d2 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 239 (piece_count d3 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 243 of 552 (piece_tables d3 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 235 (combined d4 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 244 of 552 (piece_tables d1 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 176 (piece_tables d2 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 245 of 552 (piece_tables d4 use_nega=True vs attacks d4 use_nega=True)
+Finished game 236 (piece_value d2 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 246 of 552 (attacks d4 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 241 (piece_count d1 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 247 of 552 (attacks_diff d1 use_nega=True vs attacks d3 use_nega=True)
+Finished game 242 (piece_tables d2 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 248 of 552 (attacks d3 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 244 (piece_tables d1 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 249 of 552 (attacks_diff d2 use_nega=True vs attacks d2 use_nega=True)
+Finished game 179 (combined d2 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 250 of 552 (attacks d2 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 249 (attacks_diff d2 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 251 of 552 (attacks_diff d3 use_nega=True vs attacks d1 use_nega=True)
+Finished game 250 (attacks d2 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 252 of 552 (attacks d1 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 247 (attacks_diff d1 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 253 of 552 (attacks_diff d4 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 251 (attacks_diff d3 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 254 of 552 (piece_value d4 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 201 (attacks_diff d4 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 255 of 552 (combined d1 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 248 (attacks d3 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 256 of 552 (piece_value d3 use_nega=True vs combined d1 use_nega=True)
+Finished game 193 (piece_count d1 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 257 of 552 (combined d2 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 256 (piece_value d3 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 258 of 552 (piece_value d2 use_nega=True vs combined d2 use_nega=True)
+Finished game 255 (combined d1 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 259 of 552 (combined d3 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 202 (attacks d4 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 260 of 552 (piece_value d1 use_nega=True vs combined d3 use_nega=True)
+Finished game 257 (combined d2 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 261 of 552 (combined d4 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 258 (piece_value d2 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 262 of 552 (piece_count d4 use_nega=True vs combined d4 use_nega=True)
+Finished game 259 (combined d3 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 263 of 552 (piece_count d2 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 263 (piece_count d2 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 264 of 552 (piece_count d3 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 226 (attacks d3 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 265 of 552 (piece_count d1 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 264 (piece_count d3 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 266 of 552 (piece_tables d1 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 265 (piece_count d1 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 267 of 552 (piece_tables d2 use_nega=True vs attacks d4 use_nega=True)
+Finished game 266 (piece_tables d1 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 268 of 552 (attacks d4 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 246 (attacks d4 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 269 of 552 (piece_tables d3 use_nega=True vs attacks d3 use_nega=True)
+Finished game 268 (attacks d4 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 270 of 552 (attacks d3 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 270 (attacks d3 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 271 of 552 (piece_tables d4 use_nega=True vs attacks d2 use_nega=True)
+Finished game 262 (piece_count d4 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 272 of 552 (attacks d2 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 261 (combined d4 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 273 of 552 (attacks_diff d1 use_nega=True vs attacks d1 use_nega=True)
+Finished game 234 (piece_value d3 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 274 of 552 (attacks d1 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 273 (attacks_diff d1 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 275 of 552 (attacks_diff d2 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 274 (attacks d1 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 276 of 552 (piece_value d4 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 252 (attacks d1 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 277 of 552 (attacks_diff d3 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 253 (attacks_diff d4 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 278 of 552 (piece_value d3 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 228 (attacks d2 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 279 of 552 (attacks_diff d4 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 269 (piece_tables d3 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 280 of 552 (piece_value d2 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 275 (attacks_diff d2 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 281 of 552 (combined d1 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 277 (attacks_diff d3 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 282 of 552 (piece_value d1 use_nega=True vs combined d1 use_nega=True)
+Finished game 271 (piece_tables d4 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 283 of 552 (combined d2 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 276 (piece_value d4 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 284 of 552 (piece_count d4 use_nega=True vs combined d2 use_nega=True)
+Finished game 281 (combined d1 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 285 of 552 (combined d3 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 282 (piece_value d1 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 286 of 552 (piece_count d3 use_nega=True vs combined d3 use_nega=True)
+Finished game 272 (attacks d2 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 287 of 552 (combined d4 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 285 (combined d3 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 288 of 552 (piece_count d2 use_nega=True vs combined d4 use_nega=True)
+Finished game 284 (piece_count d4 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 289 of 552 (piece_count d1 use_nega=True vs attacks d4 use_nega=True)
+Finished game 267 (piece_tables d2 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 290 of 552 (attacks d4 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 260 (piece_value d1 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 291 of 552 (piece_tables d1 use_nega=True vs attacks d3 use_nega=True)
+Finished game 279 (attacks_diff d4 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 292 of 552 (attacks d3 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 290 (attacks d4 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 293 of 552 (piece_tables d2 use_nega=True vs attacks d2 use_nega=True)
+Finished game 293 (piece_tables d2 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 294 of 552 (attacks d2 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 287 (combined d4 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 295 of 552 (piece_tables d3 use_nega=True vs attacks d1 use_nega=True)
+Finished game 294 (attacks d2 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 296 of 552 (attacks d1 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 292 (attacks d3 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 297 of 552 (piece_tables d4 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 291 (piece_tables d1 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 298 of 552 (piece_value d4 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 283 (combined d2 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 299 of 552 (attacks_diff d1 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 295 (piece_tables d3 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 300 of 552 (piece_value d3 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 296 (attacks d1 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 301 of 552 (attacks_diff d2 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 299 (attacks_diff d1 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 302 of 552 (piece_value d2 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 300 (piece_value d3 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 303 of 552 (attacks_diff d3 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 301 (attacks_diff d2 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 304 of 552 (piece_value d1 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 302 (piece_value d2 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 305 of 552 (attacks_diff d4 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 303 (attacks_diff d3 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 306 of 552 (piece_count d4 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 288 (piece_count d2 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 307 of 552 (combined d1 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 307 (combined d1 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 308 of 552 (piece_count d3 use_nega=True vs combined d1 use_nega=True)
+Finished game 308 (piece_count d3 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 309 of 552 (combined d2 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 223 (attacks_diff d2 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 310 of 552 (piece_count d2 use_nega=True vs combined d2 use_nega=True)
+Finished game 309 (combined d2 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 311 of 552 (combined d3 use_nega=True vs combined d4 use_nega=True)
+Finished game 254 (piece_value d4 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 312 of 552 (combined d4 use_nega=True vs combined d3 use_nega=True)
+Finished game 310 (piece_count d2 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 313 of 552 (piece_count d1 use_nega=True vs attacks d3 use_nega=True)
+Finished game 305 (attacks_diff d4 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 314 of 552 (attacks d3 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 311 (combined d3 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 315 of 552 (attacks d4 use_nega=True vs attacks d2 use_nega=True)
+Finished game 314 (attacks d3 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 316 of 552 (attacks d2 use_nega=True vs attacks d4 use_nega=True)
+Finished game 286 (piece_count d3 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 317 of 552 (piece_tables d1 use_nega=True vs attacks d1 use_nega=True)
+Finished game 313 (piece_count d1 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 318 of 552 (attacks d1 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 317 (piece_tables d1 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 319 of 552 (piece_tables d2 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 306 (piece_count d4 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 320 of 552 (piece_value d4 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 318 (attacks d1 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 321 of 552 (piece_tables d3 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 320 (piece_value d4 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 322 of 552 (piece_value d3 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 322 (piece_value d3 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 323 of 552 (piece_tables d4 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 321 (piece_tables d3 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 324 of 552 (piece_value d2 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 316 (attacks d2 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 325 of 552 (attacks_diff d1 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 304 (piece_value d1 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 326 of 552 (piece_value d1 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 325 (attacks_diff d1 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 327 of 552 (attacks_diff d2 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 278 (piece_value d3 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 328 of 552 (piece_count d4 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 298 (piece_value d4 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 329 of 552 (attacks_diff d3 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 326 (piece_value d1 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 330 of 552 (piece_count d3 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 33 (piece_count d4 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 331 of 552 (attacks_diff d4 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 328 (piece_count d4 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 332 of 552 (piece_count d2 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 329 (attacks_diff d3 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 333 of 552 (combined d1 use_nega=True vs combined d4 use_nega=True)
+Finished game 319 (piece_tables d2 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 334 of 552 (combined d4 use_nega=True vs combined d1 use_nega=True)
+Finished game 289 (piece_count d1 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 335 of 552 (combined d2 use_nega=True vs combined d3 use_nega=True)
+Finished game 327 (attacks_diff d2 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 336 of 552 (combined d3 use_nega=True vs combined d2 use_nega=True)
+Finished game 323 (piece_tables d4 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 337 of 552 (piece_count d1 use_nega=True vs attacks d2 use_nega=True)
+Finished game 336 (combined d3 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 338 of 552 (attacks d2 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 331 (attacks_diff d4 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 339 of 552 (attacks d3 use_nega=True vs attacks d1 use_nega=True)
+Finished game 338 (attacks d2 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 340 of 552 (attacks d1 use_nega=True vs attacks d3 use_nega=True)
+Finished game 333 (combined d1 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 341 of 552 (attacks d4 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 339 (attacks d3 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 342 of 552 (piece_value d4 use_nega=True vs attacks d4 use_nega=True)
+Finished game 337 (piece_count d1 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 343 of 552 (piece_tables d1 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 340 (attacks d1 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 344 of 552 (piece_value d3 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 312 (combined d4 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 345 of 552 (piece_tables d2 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 343 (piece_tables d1 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 346 of 552 (piece_value d2 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 345 (piece_tables d2 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 347 of 552 (piece_tables d3 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 346 (piece_value d2 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 348 of 552 (piece_value d1 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 347 (piece_tables d3 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 349 of 552 (piece_tables d4 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 324 (piece_value d2 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 350 of 552 (piece_count d4 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 334 (combined d4 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 351 of 552 (attacks_diff d1 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 348 (piece_value d1 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 352 of 552 (piece_count d3 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 335 (combined d2 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 353 of 552 (attacks_diff d2 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 351 (attacks_diff d1 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 354 of 552 (piece_count d2 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 353 (attacks_diff d2 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 355 of 552 (attacks_diff d3 use_nega=True vs combined d4 use_nega=True)
+Finished game 341 (attacks d4 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 356 of 552 (combined d4 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 354 (piece_count d2 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 357 of 552 (attacks_diff d4 use_nega=True vs combined d3 use_nega=True)
+Finished game 297 (piece_tables d4 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 358 of 552 (combined d3 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 352 (piece_count d3 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 359 of 552 (combined d1 use_nega=True vs combined d2 use_nega=True)
+Finished game 359 (combined d1 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 360 of 552 (combined d2 use_nega=True vs combined d1 use_nega=True)
+Finished game 330 (piece_count d3 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 361 of 552 (piece_count d1 use_nega=True vs attacks d1 use_nega=True)
+Finished game 361 (piece_count d1 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 362 of 552 (attacks d1 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 280 (piece_value d2 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 363 of 552 (attacks d2 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 360 (combined d2 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 364 of 552 (piece_value d4 use_nega=True vs attacks d2 use_nega=True)
+Finished game 362 (attacks d1 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 365 of 552 (attacks d3 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 365 (attacks d3 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 366 of 552 (piece_value d3 use_nega=True vs attacks d3 use_nega=True)
+Finished game 350 (piece_count d4 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 367 of 552 (attacks d4 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 349 (piece_tables d4 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 368 of 552 (piece_value d2 use_nega=True vs attacks d4 use_nega=True)
+Finished game 367 (attacks d4 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 369 of 552 (piece_tables d1 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 366 (piece_value d3 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 370 of 552 (piece_value d1 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 245 (piece_tables d4 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 371 of 552 (piece_tables d2 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 363 (attacks d2 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 372 of 552 (piece_count d4 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 369 (piece_tables d1 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 373 of 552 (piece_tables d3 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 370 (piece_value d1 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 374 of 552 (piece_count d3 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 356 (combined d4 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 375 of 552 (piece_tables d4 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 374 (piece_count d3 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 376 of 552 (piece_count d2 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 373 (piece_tables d3 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 377 of 552 (attacks_diff d1 use_nega=True vs combined d4 use_nega=True)
+Finished game 332 (piece_count d2 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 378 of 552 (combined d4 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 342 (piece_value d4 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 379 of 552 (attacks_diff d2 use_nega=True vs combined d3 use_nega=True)
+Finished game 364 (piece_value d4 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 380 of 552 (combined d3 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 371 (piece_tables d2 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 381 of 552 (attacks_diff d3 use_nega=True vs combined d2 use_nega=True)
+Finished game 381 (attacks_diff d3 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 382 of 552 (combined d2 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 375 (piece_tables d4 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 383 of 552 (attacks_diff d4 use_nega=True vs combined d1 use_nega=True)
+Finished game 378 (combined d4 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 384 of 552 (combined d1 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 377 (attacks_diff d1 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 385 of 552 (piece_count d1 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 380 (combined d3 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 386 of 552 (piece_value d4 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 355 (attacks_diff d3 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 387 of 552 (attacks d1 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 372 (piece_count d4 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 388 of 552 (piece_value d3 use_nega=True vs attacks d1 use_nega=True)
+Finished game 387 (attacks d1 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 389 of 552 (attacks d2 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 388 (piece_value d3 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 390 of 552 (piece_value d2 use_nega=True vs attacks d2 use_nega=True)
+Finished game 389 (attacks d2 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 391 of 552 (attacks d3 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 243 (piece_tables d3 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 392 of 552 (piece_value d1 use_nega=True vs attacks d3 use_nega=True)
+Finished game 391 (attacks d3 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 393 of 552 (attacks d4 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 390 (piece_value d2 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 394 of 552 (piece_count d4 use_nega=True vs attacks d4 use_nega=True)
+Finished game 386 (piece_value d4 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 395 of 552 (piece_tables d1 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 392 (piece_value d1 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 396 of 552 (piece_count d3 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 395 (piece_tables d1 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 397 of 552 (piece_tables d2 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 383 (attacks_diff d4 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 398 of 552 (piece_count d2 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 358 (combined d3 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 399 of 552 (piece_tables d3 use_nega=True vs combined d4 use_nega=True)
+Finished game 398 (piece_count d2 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 400 of 552 (combined d4 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 397 (piece_tables d2 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 401 of 552 (piece_tables d4 use_nega=True vs combined d3 use_nega=True)
+Finished game 385 (piece_count d1 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 402 of 552 (combined d3 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 379 (attacks_diff d2 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 403 of 552 (attacks_diff d1 use_nega=True vs combined d2 use_nega=True)
+Finished game 403 (attacks_diff d1 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 404 of 552 (combined d2 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 402 (combined d3 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 405 of 552 (attacks_diff d2 use_nega=True vs combined d1 use_nega=True)
+Finished game 382 (combined d2 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 406 of 552 (combined d1 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 406 (combined d1 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 407 of 552 (attacks_diff d3 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 344 (piece_value d3 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 408 of 552 (attacks_diff d4 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 396 (piece_count d3 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 409 of 552 (piece_count d1 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 404 (combined d2 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 410 of 552 (piece_value d3 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 376 (piece_count d2 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 411 of 552 (piece_value d4 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 393 (attacks d4 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 412 of 552 (piece_value d2 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 410 (piece_value d3 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 413 of 552 (attacks d1 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 405 (attacks_diff d2 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 414 of 552 (piece_value d1 use_nega=True vs attacks d1 use_nega=True)
+Finished game 409 (piece_count d1 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 415 of 552 (attacks d2 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 414 (piece_value d1 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 416 of 552 (piece_count d4 use_nega=True vs attacks d2 use_nega=True)
+Finished game 413 (attacks d1 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 417 of 552 (attacks d3 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 411 (piece_value d4 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 418 of 552 (piece_count d3 use_nega=True vs attacks d3 use_nega=True)
+Finished game 399 (piece_tables d3 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 419 of 552 (attacks d4 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 315 (attacks d4 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 420 of 552 (piece_count d2 use_nega=True vs attacks d4 use_nega=True)
+Finished game 384 (combined d1 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 421 of 552 (piece_tables d1 use_nega=True vs combined d4 use_nega=True)
+Finished game 417 (attacks d3 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 422 of 552 (combined d4 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 357 (attacks_diff d4 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 423 of 552 (piece_tables d2 use_nega=True vs combined d3 use_nega=True)
+Finished game 419 (attacks d4 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 424 of 552 (combined d3 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 424 (combined d3 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 425 of 552 (piece_tables d3 use_nega=True vs combined d2 use_nega=True)
+Finished game 412 (piece_value d2 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 426 of 552 (combined d2 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 415 (attacks d2 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 427 of 552 (piece_tables d4 use_nega=True vs combined d1 use_nega=True)
+Finished game 426 (combined d2 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 428 of 552 (combined d1 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 425 (piece_tables d3 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 429 of 552 (attacks_diff d1 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 418 (piece_count d3 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 430 of 552 (attacks_diff d4 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 430 (attacks_diff d4 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 431 of 552 (attacks_diff d2 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 400 (combined d4 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 432 of 552 (attacks_diff d3 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 432 (attacks_diff d3 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 433 of 552 (piece_count d1 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 408 (attacks_diff d4 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 434 of 552 (piece_value d2 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 433 (piece_count d1 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 435 of 552 (piece_value d3 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 434 (piece_value d2 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 436 of 552 (piece_value d1 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 421 (piece_tables d1 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 437 of 552 (piece_value d4 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 435 (piece_value d3 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 438 of 552 (piece_count d4 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 416 (piece_count d4 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 439 of 552 (attacks d1 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 439 (attacks d1 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 440 of 552 (piece_count d3 use_nega=True vs attacks d1 use_nega=True)
+Finished game 394 (piece_count d4 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 441 of 552 (attacks d2 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 436 (piece_value d1 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 442 of 552 (piece_count d2 use_nega=True vs attacks d2 use_nega=True)
+Finished game 441 (attacks d2 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 443 of 552 (attacks d3 use_nega=True vs combined d4 use_nega=True)
+Finished game 440 (piece_count d3 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 444 of 552 (combined d4 use_nega=True vs attacks d3 use_nega=True)
+Finished game 444 (combined d4 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 445 of 552 (attacks d4 use_nega=True vs combined d3 use_nega=True)
+Finished game 442 (piece_count d2 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 446 of 552 (combined d3 use_nega=True vs attacks d4 use_nega=True)
+Finished game 438 (piece_count d4 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 447 of 552 (piece_tables d1 use_nega=True vs combined d2 use_nega=True)
+Finished game 368 (piece_value d2 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 448 of 552 (combined d2 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 407 (attacks_diff d3 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 449 of 552 (piece_tables d2 use_nega=True vs combined d1 use_nega=True)
+Finished game 437 (piece_value d4 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 450 of 552 (combined d1 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 428 (combined d1 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 451 of 552 (piece_tables d3 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 449 (piece_tables d2 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 452 of 552 (attacks_diff d4 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 447 (piece_tables d1 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 453 of 552 (piece_tables d4 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 450 (combined d1 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 454 of 552 (attacks_diff d3 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 443 (attacks d3 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 455 of 552 (attacks_diff d1 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 448 (combined d2 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 456 of 552 (attacks_diff d2 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 422 (combined d4 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 457 of 552 (piece_count d1 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 455 (attacks_diff d1 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 458 of 552 (piece_value d1 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 457 (piece_count d1 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 459 of 552 (piece_value d2 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 420 (piece_count d2 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 460 of 552 (piece_count d4 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 458 (piece_value d1 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 461 of 552 (piece_value d3 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 456 (attacks_diff d2 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 462 of 552 (piece_count d3 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 461 (piece_value d3 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 463 of 552 (piece_value d4 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 462 (piece_count d3 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 464 of 552 (piece_count d2 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 459 (piece_value d2 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 465 of 552 (attacks d1 use_nega=True vs combined d4 use_nega=True)
+Finished game 460 (piece_count d4 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 466 of 552 (combined d4 use_nega=True vs attacks d1 use_nega=True)
+Finished game 423 (piece_tables d2 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 467 of 552 (attacks d2 use_nega=True vs combined d3 use_nega=True)
+Finished game 463 (piece_value d4 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 468 of 552 (combined d3 use_nega=True vs attacks d2 use_nega=True)
+Finished game 401 (piece_tables d4 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 469 of 552 (attacks d3 use_nega=True vs combined d2 use_nega=True)
+Finished game 468 (combined d3 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 470 of 552 (combined d2 use_nega=True vs attacks d3 use_nega=True)
+Finished game 469 (attacks d3 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 471 of 552 (attacks d4 use_nega=True vs combined d1 use_nega=True)
+Finished game 429 (attacks_diff d1 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 472 of 552 (combined d1 use_nega=True vs attacks d4 use_nega=True)
+Finished game 427 (piece_tables d4 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 473 of 552 (piece_tables d1 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 466 (combined d4 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 474 of 552 (attacks_diff d4 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 470 (combined d2 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 475 of 552 (piece_tables d2 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 465 (attacks d1 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 476 of 552 (attacks_diff d3 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 464 (piece_count d2 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 477 of 552 (piece_tables d3 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 467 (attacks d2 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 478 of 552 (attacks_diff d2 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 478 (attacks_diff d2 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 479 of 552 (piece_tables d4 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 477 (piece_tables d3 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 480 of 552 (attacks_diff d1 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 454 (attacks_diff d3 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 481 of 552 (piece_count d1 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 476 (attacks_diff d3 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 482 of 552 (piece_count d4 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 479 (piece_tables d4 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 483 of 552 (piece_value d1 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 475 (piece_tables d2 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 484 of 552 (piece_count d3 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 483 (piece_value d1 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 485 of 552 (piece_value d2 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 484 (piece_count d3 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 486 of 552 (piece_count d2 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 485 (piece_value d2 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 487 of 552 (piece_value d3 use_nega=True vs combined d4 use_nega=True)
+Finished game 482 (piece_count d4 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 488 of 552 (combined d4 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 486 (piece_count d2 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 489 of 552 (piece_value d4 use_nega=True vs combined d3 use_nega=True)
+Finished game 451 (piece_tables d3 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 490 of 552 (combined d3 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 481 (piece_count d1 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 491 of 552 (attacks d1 use_nega=True vs combined d2 use_nega=True)
+Finished game 446 (combined d3 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 492 of 552 (combined d2 use_nega=True vs attacks d1 use_nega=True)
+Finished game 491 (attacks d1 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 493 of 552 (attacks d2 use_nega=True vs combined d1 use_nega=True)
+Finished game 492 (combined d2 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 494 of 552 (combined d1 use_nega=True vs attacks d2 use_nega=True)
+Finished game 493 (attacks d2 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 495 of 552 (attacks d3 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 452 (attacks_diff d4 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 496 of 552 (attacks_diff d4 use_nega=True vs attacks d3 use_nega=True)
+Finished game 494 (combined d1 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 497 of 552 (attacks d4 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 453 (piece_tables d4 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 498 of 552 (attacks_diff d3 use_nega=True vs attacks d4 use_nega=True)
+Finished game 474 (attacks_diff d4 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 499 of 552 (piece_tables d1 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 480 (attacks_diff d1 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 500 of 552 (attacks_diff d2 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 490 (combined d3 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 501 of 552 (piece_tables d2 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 499 (piece_tables d1 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 502 of 552 (attacks_diff d1 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 431 (attacks_diff d2 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 503 of 552 (piece_tables d3 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 501 (piece_tables d2 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 504 of 552 (piece_tables d4 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 488 (combined d4 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 505 of 552 (piece_count d1 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 502 (attacks_diff d1 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 506 of 552 (piece_count d3 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 506 (piece_count d3 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 507 of 552 (piece_count d4 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 505 (piece_count d1 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 508 of 552 (piece_count d2 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 496 (attacks_diff d4 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 509 of 552 (piece_value d1 use_nega=True vs combined d4 use_nega=True)
+Finished game 503 (piece_tables d3 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 510 of 552 (combined d4 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 507 (piece_count d4 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 511 of 552 (piece_value d2 use_nega=True vs combined d3 use_nega=True)
+Finished game 504 (piece_tables d4 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 512 of 552 (combined d3 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 487 (piece_value d3 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 513 of 552 (piece_value d3 use_nega=True vs combined d2 use_nega=True)
+Finished game 513 (piece_value d3 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 514 of 552 (combined d2 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 512 (combined d3 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 515 of 552 (piece_value d4 use_nega=True vs combined d1 use_nega=True)
+Finished game 508 (piece_count d2 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 516 of 552 (combined d1 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 471 (attacks d4 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 517 of 552 (attacks d1 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 510 (combined d4 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 518 of 552 (attacks_diff d4 use_nega=True vs attacks d1 use_nega=True)
+Finished game 509 (piece_value d1 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 519 of 552 (attacks d2 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 514 (combined d2 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 520 of 552 (attacks_diff d3 use_nega=True vs attacks d2 use_nega=True)
+Finished game 518 (attacks_diff d4 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 521 of 552 (attacks d3 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 520 (attacks_diff d3 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 522 of 552 (attacks_diff d2 use_nega=True vs attacks d3 use_nega=True)
+Finished game 516 (combined d1 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 523 of 552 (attacks d4 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 521 (attacks d3 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 524 of 552 (attacks_diff d1 use_nega=True vs attacks d4 use_nega=True)
+Finished game 522 (attacks_diff d2 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 525 of 552 (piece_tables d1 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 515 (piece_value d4 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 526 of 552 (piece_tables d4 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 500 (attacks_diff d2 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 527 of 552 (piece_tables d2 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 527 (piece_tables d2 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 528 of 552 (piece_tables d3 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 523 (attacks d4 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 529 of 552 (piece_count d1 use_nega=True vs piece_count d2 use_nega=True)
+Finished game 528 (piece_tables d3 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 530 of 552 (piece_count d2 use_nega=True vs piece_count d1 use_nega=True)
+Finished game 525 (piece_tables d1 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 531 of 552 (piece_count d3 use_nega=True vs combined d4 use_nega=True)
+Finished game 530 (piece_count d2 use_nega=True vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 532 of 552 (combined d4 use_nega=True vs piece_count d3 use_nega=True)
+Finished game 529 (piece_count d1 use_nega=True vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 533 of 552 (piece_count d4 use_nega=True vs combined d3 use_nega=True)
+Finished game 67 (piece_value d4 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Started game 534 of 552 (combined d3 use_nega=True vs piece_count d4 use_nega=True)
+Finished game 472 (combined d1 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 535 of 552 (piece_value d1 use_nega=True vs combined d2 use_nega=True)
+Finished game 519 (attacks d2 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 536 of 552 (combined d2 use_nega=True vs piece_value d1 use_nega=True)
+Finished game 517 (attacks d1 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 537 of 552 (piece_value d2 use_nega=True vs combined d1 use_nega=True)
+Finished game 536 (combined d2 use_nega=True vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 538 of 552 (combined d1 use_nega=True vs piece_value d2 use_nega=True)
+Finished game 535 (piece_value d1 use_nega=True vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 539 of 552 (piece_value d3 use_nega=True vs attacks_diff d4 use_nega=True)
+Finished game 537 (piece_value d2 use_nega=True vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 540 of 552 (attacks_diff d4 use_nega=True vs piece_value d3 use_nega=True)
+Finished game 534 (combined d3 use_nega=True vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 541 of 552 (piece_value d4 use_nega=True vs attacks_diff d3 use_nega=True)
+Finished game 538 (combined d1 use_nega=True vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 542 of 552 (attacks_diff d3 use_nega=True vs piece_value d4 use_nega=True)
+Finished game 532 (combined d4 use_nega=True vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 543 of 552 (attacks d1 use_nega=True vs attacks_diff d2 use_nega=True)
+Finished game 531 (piece_count d3 use_nega=True vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 544 of 552 (attacks_diff d2 use_nega=True vs attacks d1 use_nega=True)
+Finished game 543 (attacks d1 use_nega=True vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 545 of 552 (attacks d2 use_nega=True vs attacks_diff d1 use_nega=True)
+Finished game 540 (attacks_diff d4 use_nega=True vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 546 of 552 (attacks_diff d1 use_nega=True vs attacks d2 use_nega=True)
+Finished game 544 (attacks_diff d2 use_nega=True vs attacks d1 use_nega=True): 1/2-1/2 {Draw by stalemate}
+Started game 547 of 552 (attacks d3 use_nega=True vs piece_tables d4 use_nega=True)
+Finished game 546 (attacks_diff d1 use_nega=True vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 548 of 552 (piece_tables d4 use_nega=True vs attacks d3 use_nega=True)
+Finished game 545 (attacks d2 use_nega=True vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 549 of 552 (attacks d4 use_nega=True vs piece_tables d3 use_nega=True)
+Finished game 542 (attacks_diff d3 use_nega=True vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 550 of 552 (piece_tables d3 use_nega=True vs attacks d4 use_nega=True)
+Finished game 539 (piece_value d3 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 551 of 552 (piece_tables d1 use_nega=True vs piece_tables d2 use_nega=True)
+Finished game 498 (attacks_diff d3 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 552 of 552 (piece_tables d2 use_nega=True vs piece_tables d1 use_nega=True)
+Finished game 549 (attacks d4 use_nega=True vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 551 (piece_tables d1 use_nega=True vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 552 (piece_tables d2 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Finished game 547 (attacks d3 use_nega=True vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 497 (attacks d4 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Finished game 495 (attacks d3 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 524 (attacks_diff d1 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 548 (piece_tables d4 use_nega=True vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 511 (piece_value d2 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Finished game 550 (piece_tables d3 use_nega=True vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 445 (attacks d4 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Finished game 489 (piece_value d4 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Finished game 473 (piece_tables d1 use_nega=True vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 541 (piece_value d4 use_nega=True vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Finished game 533 (piece_count d4 use_nega=True vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Finished game 526 (piece_tables d4 use_nega=True vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Rank Name                          Elo     +/-   Games   Score    Draw 
+   1 combined d4 use_nega=True       0       0      46   50.0%  100.0% 
+   2 combined d3 use_nega=True       0       0      46   50.0%  100.0% 
+   3 combined d2 use_nega=True       0       0      46   50.0%  100.0% 
+   4 combined d1 use_nega=True       0       0      46   50.0%  100.0% 
+   5 attacks_diff d4 use_nega=True       0       0      46   50.0%  100.0% 
+   6 attacks_diff d3 use_nega=True       0       0      46   50.0%  100.0% 
+   7 attacks_diff d2 use_nega=True       0       0      46   50.0%  100.0% 
+   8 attacks_diff d1 use_nega=True       0       0      46   50.0%  100.0% 
+   9 piece_tables d4 use_nega=True       0       0      46   50.0%  100.0% 
+  10 piece_tables d3 use_nega=True       0       0      46   50.0%  100.0% 
+  11 piece_tables d2 use_nega=True       0       0      46   50.0%  100.0% 
+  12 piece_tables d1 use_nega=True       0       0      46   50.0%  100.0% 
+  13 attacks d4 use_nega=True        0       0      46   50.0%  100.0% 
+  14 attacks d3 use_nega=True        0       0      46   50.0%  100.0% 
+  15 attacks d2 use_nega=True        0       0      46   50.0%  100.0% 
+  16 attacks d1 use_nega=True        0       0      46   50.0%  100.0% 
+  17 piece_value d4 use_nega=True       0       0      46   50.0%  100.0% 
+  18 piece_value d3 use_nega=True       0       0      46   50.0%  100.0% 
+  19 piece_value d2 use_nega=True       0       0      46   50.0%  100.0% 
+  20 piece_value d1 use_nega=True       0       0      46   50.0%  100.0% 
+  21 piece_count d4 use_nega=True       0       0      46   50.0%  100.0% 
+  22 piece_count d3 use_nega=True       0       0      46   50.0%  100.0% 
+  23 piece_count d2 use_nega=True       0       0      46   50.0%  100.0% 
+  24 piece_count d1 use_nega=True       0       0      46   50.0%  100.0% 
+
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: piece_count d1 use_nega=True
+   "Draw by 3-fold repetition": 16
+   "Draw by fifty moves rule": 3
+   "Draw by stalemate": 27
+Player: piece_count d2 use_nega=True
+   "Draw by 3-fold repetition": 22
+   "Draw by fifty moves rule": 2
+   "Draw by stalemate": 22
+Player: piece_count d3 use_nega=True
+   "Draw by 3-fold repetition": 21
+   "Draw by fifty moves rule": 2
+   "Draw by stalemate": 23
+Player: piece_count d4 use_nega=True
+   "Draw by 3-fold repetition": 12
+   "Draw by fifty moves rule": 3
+   "Draw by stalemate": 31
+Player: piece_value d1 use_nega=True
+   "Draw by 3-fold repetition": 14
+   "Draw by fifty moves rule": 2
+   "Draw by stalemate": 30
+Player: piece_value d2 use_nega=True
+   "Draw by 3-fold repetition": 22
+   "Draw by fifty moves rule": 2
+   "Draw by stalemate": 22
+Player: piece_value d3 use_nega=True
+   "Draw by 3-fold repetition": 17
+   "Draw by fifty moves rule": 2
+   "Draw by stalemate": 27
+Player: piece_value d4 use_nega=True
+   "Draw by 3-fold repetition": 20
+   "Draw by fifty moves rule": 3
+   "Draw by stalemate": 23
+Player: attacks d1 use_nega=True
+   "Draw by 3-fold repetition": 29
+   "Draw by fifty moves rule": 1
+   "Draw by stalemate": 16
+Player: attacks d2 use_nega=True
+   "Draw by 3-fold repetition": 40
+   "Draw by fifty moves rule": 1
+   "Draw by stalemate": 5
+Player: attacks d3 use_nega=True
+   "Draw by 3-fold repetition": 26
+   "Draw by fifty moves rule": 1
+   "Draw by stalemate": 19
+Player: attacks d4 use_nega=True
+   "Draw by 3-fold repetition": 35
+   "Draw by fifty moves rule": 3
+   "Draw by stalemate": 8
+Player: piece_tables d1 use_nega=True
+   "Draw by 3-fold repetition": 31
+   "Draw by fifty moves rule": 10
+   "Draw by stalemate": 5
+Player: piece_tables d2 use_nega=True
+   "Draw by 3-fold repetition": 39
+   "Draw by fifty moves rule": 2
+   "Draw by stalemate": 5
+Player: piece_tables d3 use_nega=True
+   "Draw by 3-fold repetition": 39
+   "Draw by fifty moves rule": 2
+   "Draw by stalemate": 5
+Player: piece_tables d4 use_nega=True
+   "Draw by 3-fold repetition": 37
+   "Draw by fifty moves rule": 1
+   "Draw by stalemate": 8
+Player: attacks_diff d1 use_nega=True
+   "Draw by 3-fold repetition": 34
+   "Draw by fifty moves rule": 3
+   "Draw by stalemate": 9
+Player: attacks_diff d2 use_nega=True
+   "Draw by 3-fold repetition": 36
+   "Draw by fifty moves rule": 1
+   "Draw by stalemate": 9
+Player: attacks_diff d3 use_nega=True
+   "Draw by 3-fold repetition": 26
+   "Draw by fifty moves rule": 13
+   "Draw by stalemate": 7
+Player: attacks_diff d4 use_nega=True
+   "Draw by 3-fold repetition": 37
+   "Draw by stalemate": 9
+Player: combined d1 use_nega=True
+   "Draw by 3-fold repetition": 36
+   "Draw by fifty moves rule": 4
+   "Draw by stalemate": 6
+Player: combined d2 use_nega=True
+   "Draw by 3-fold repetition": 37
+   "Draw by stalemate": 9
+Player: combined d3 use_nega=True
+   "Draw by 3-fold repetition": 24
+   "Draw by fifty moves rule": 16
+   "Draw by stalemate": 6
+Player: combined d4 use_nega=True
+   "Draw by 3-fold repetition": 32
+   "Draw by fifty moves rule": 1
+   "Draw by stalemate": 13
+Finished match

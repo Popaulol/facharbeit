@@ -31,9 +31,6 @@
 \usepackage{xurl}
 \usepackage{microtype}
 \usepackage{verbatim}
-\usepackage{minted}
-\usepackage{placeins}
-\usepackage{afterpage}
 \usepackage[font={scriptsize}, labelfont=bf, format=hang]{caption}
 \usepackage[font={scriptsize}, labelfont=bf, labelformat=simple]{subcaption}
 % FIX: Allow more than 26 subfigures
@@ -106,7 +103,6 @@
 \newcommand \Abs{Abs.\,}
 \newcommand \wahrsch{wahrsch.\xspace }
 \newcommand \Zeile{Z.\,}
-\newcommand \undaehnliches{u.\,Ä.\xspace}
 \newcommand{\RM}[1]{\MakeUppercase{\romannumeral #1{}}}
 
 
@@ -259,12 +255,12 @@ Meiner Meinung nach sind diese Algorithmen auch heute immer noch wichtig, da die
 Wenn ein solcher Algorithmus einen Fehler hat, lässt sich dieser systematisch suchen und lösen, während es bei Künstlichen Intelligenzen kaum solche Möglichkeiten gibt, außer diese auf einem verändertem Datensatz erneut \bzw weiter zu Trainieren.
 
 \subsection{Warum Schach?}\label{subsec:warum-schach?}
-Der hier besprochene Minimax Algorithmus lässt sich nicht nur auf das Schachspiel, sondern auf alle Spiele mit zwei Spielern, bei denen es keinen Zufallsaspekt gibt anwenden\footnote{Neumann, J. von.(1928):  Zur Theorie der Gesellschaftsspiele, Mathematische Annalen 100: S. 295--320. \url{https://eudml.org/doc/159291} (Abgerufen 10.03.2024)}.
+Der hier besprochene Minimax Algorithmus lässt sich nicht nur auf das Schachspiel, sondern auf alle Spiele mit zwei Spielern, bei denen es keinen Zufallsaspekt gibt anwenden\footnote{Neumann, J. von. \enquote{Zur Theorie der Gesellschaftsspiele.} Mathematische Annalen 100 (1928): S. 295--320. \url{https://eudml.org/doc/159291} (Abgerufen 10.03.2024)}.
 Da es eine enorm große Menge an solchen Spielen gibt, wie \zB TicTacToe, Dame, Shogi und eben Schach und ich in dieser Arbeit den Algorithmus nicht nur abstrakt untersuchen, sondern auch auf ein praktisches Beispiel eingehen wollte, habe ich mich aus mehreren Gründen für das Schachspiel entschiedenen.
 Zum einen ist dieses, anders als \zB TicTacToe, nicht gelöst \dasheisst es wurde noch keine perfekte Strategie gefunden, mit der einer der beiden Spieler einen Sieg \bzw ein Unentschieden erzwingen kann, zum anderen spiele ich persönlich sehr gerne Schach.
 
 \section{Der Minimax Algorithmus}\label{sec:der-minimax-algorithmus}
-Der Minimax Algorithmus ist ein rekursiver Algorithmus aus der kombinatorischen Spieltheorie, der bei Spielen mit zwei Spielern, bei denen beide Spieler Zugriff auf alle das Spiel betreffenden Informationen haben, \dasheisst es keinen Zufall gibt und die definitiv in einer endlichen Zahl an Zügen enden, angewendet werden kann, um für beide Spieler eine optimale Strategie herauszufinden und zu untersuchen, welcher Spieler ein Spiel gewinnt \bzw ob es in einem Unentschieden endet\footnote{Conway, J. H. (1983): Objektive Spiele und das Nimm Spiel. In: Über Zahlen und Spiele \url{https://doi.org/10.1007/978-3-322-88997-3_12} (Abgerufen 14.03.2024)}.
+Der Minimax Algorithmus ist ein rekursiver Algorithmus aus der kombinatorischen Spieltheorie, der bei Spielen mit zwei Spielern, bei denen beide Spieler Zugriff auf alle das Spiel betreffenden Informationen haben, \dasheisst es keinen Zufall gibt und die definitiv in einer endlichen Zahl an Zügen enden, angewendet werden kann, um für beide Spieler eine optimale Strategie herauszufinden und zu untersuchen, welcher Spieler ein Spiel gewinnt \bzw ob es in einem Unentschieden endet\footnote{Conway, J.H. (1983). Objektive Spiele und das Nimm Spiel. In: Über Zahlen und Spiele. \url{https://doi.org/10.1007/978-3-322-88997-3_12} (Abgerufen 14.03.2024)}.
 
 
 \subsection{Erklärung des Minimax Algorithmus}\label{subsec:erklarung-des-minimax-algorithmus}
@@ -278,16 +274,16 @@ Aus diesem Fakt leitet sich auch der Name des Algorithmus \enquote{MiniMax} her.
 Der Algorithmus geht rekursiv durch diesen Baum, dabei wechselt er auf jeder Ebene zwischen den Zielen der beiden Spieler.
 Falls der aktuelle Knoten bereits einen Wert enthält, also ein Blatt des Baumes ist, gibt der Minimax Algorithmus dessen Wert unverändert zurück.
 Falls dies nicht der Fall ist, ruft er sich selbst auf allen dem aktuellen Knoten untergeordneten Knoten auf und gibt den Minimal \bzw Maximalwert der Rückgabewerte dieser Aufrufe zurück, je nachdem welche der beiden Strategien gerade angewandt wird\footnote{Roberts, E. \etal (2003): Stratigies and Tactics for Intelligent Seach: Algorithms - Minimax \url{https://cs.stanford.edu/people/eroberts/courses/soco/projects/2003-04/intelligent-search/minimax.html} (Abgerufen 14.03.2024)}.
-In meiner Implementierungen dieses Algorithmus (\siehe Anhang ~\ref{subsec:code}) wird diese Baumstruktur nicht erst erstellt, sondern der Algorithmus generiert die nächstmöglichen Züge einer Position während der Ausführung des Algorithmus.
-So kann Arbeitsspeicher gespart werden kann, indem der vollständige Baum gespeichert nicht werden muss.
-Für eine Visualisierung dieses Algorithmus, \siehe Abbildung~\ref{fig:minimax-visulisation}.
+In meiner Implementierungen dieses Algorithmus~\ref{code} wird diese Baumstruktur nicht erst erstellt, sondern der Algorithmus generiert die nächstmöglichen Züge einer Position während der Ausführung des Algorithmus.
+So kann Arbeitsspeicher gespart werden kann, indem vollständige Baum gespeichert werden muss.
+Für eine Visualisierung dieses Algorithmus, siehe: Abbildung~\ref{fig:minimax-visulisation}.
 
 \subsection{Probleme bei der Anwendung auf das Schachspiel}\label{subsec:probleme-bei-der-anwendung-auf-das-schachspiel}
 Während es auf den ersten Blick scheint, dass der Minimax Algorithmus perfekt für die Anwendung auf das Schachspiel geeignet ist, gibt es doch einige Probleme, die dabei sichtbar werden.
 
 \subsubsection{Endlos lange Spiele}
 Nach den traditionellen Schach Regeln\footnote{The Rules of Chess \url{https://www.chess-chivalry.com/en/pages/rules-of-chess} (Abgerufen 14.03.2024)} kann ein Schachspiel theoretisch unendlich lange gespielt werden, da eine unendliche Wiederholung einiger Zugsequenzen möglich ist, \zB die Zugsequenz {\fontfamily{lmss}\selectfont Nc3 Nc6 Nb1 Nb8}, falls diese aus der Startposition gespielt wird.
-Moderne Turnierregeln\footnote{FIDE LAWS of CHESS (2023): \url{https://www.fide.com/FIDE/handbook/LawsOfChess.pdf} (Abgerufen 14.03.2024)} umgehen dieses Problem durch das Einführen von 3 zusätzlichen Endbedingungen des Spiels, die als Unentschieden gewertet werden:
+Moderne Turnierregeln\footnote{FIDE LAWS of CHESS, (2023): \url{https://www.fide.com/FIDE/handbook/LawsOfChess.pdf} (Abgerufen 14.03.2024)} umgehen dieses Problem durch das Einführen von 3 zusätzlichen Endbedingungen des Spiels, die als Unentschieden gewertet werden:
 \begin{itemize}
     \item Das Brett befindet sich in einer Position in der kein Spieler mehr Schachmatt setzen kann.
     \item Die selbe Position des Schachbrettes ist im Verlauf des Spiels 3 mal aufgetreten.
@@ -295,21 +291,21 @@ Moderne Turnierregeln\footnote{FIDE LAWS of CHESS (2023): \url{https://www.fide.
 \end{itemize}
 Zwar müssen diese Endbedingungen, damit sie tatsächlich das Spiel beenden, von einem der beiden Spieler explizit ausgerufen werden, da dies aber auch in den Zügen des Algorithmus passieren kann, kann dieser diese Situationen als Unentschieden werten und in diesen das Unentschieden ausrufen.
 \subsubsection{Laufzeit des Algorithmus}
-Zwar ist es mit diesen Regeländerungen theoretisch möglich den Minimax Algorithmus auf das Schachspiel anzuwenden, allerdings liegt die Anzahl an möglichen Schachspielen bei  über $ 10^{120} $ \footnote{Shannon, C. (1950): Programming a Computer for Playing Chess \url{https://vision.unipv.it/IA1/ProgrammingaComputerforPlayingChess.pdf} (Abgerufen 16.02.2024)} und somit würde der Minimax Algorithmus für eine sehr lange Zeit laufen.
+Zwar ist es mit diesen Regeländerungen theoretisch möglich den Minimax Algorithmus auf das Schachspiel anzuwenden, allerdings liegt die Anzahl an möglichen Schachspielen bei  über $ 10^{120} $ \footnote{Claude Shannon (1950): Programming a Computer for Playing Chess \url{https://vision.unipv.it/IA1/ProgrammingaComputerforPlayingChess.pdf} (Abgerufen 16.02.2024)} und somit würde der Minimax Algorithmus für eine sehr lange Zeit laufen.
 Daher muss der Minimax Algorithmus etwas angepasst werden, um praktikabel auf das Schachspiel angewandt zu werden.
 Dazu wird die maximale Suchtiefe des Algorithmus limitiert.
 Dadurch ist nicht jeder Knoten, bei dem die Suche endet, ein das Spiel beendender Blattknoten.
 Deshalb müssen diesen Knoten nun andere Werte für die Anwendung des Minimax Algorithmus zugewiesen werden.
 Dafür kommen \sog Bewertungsfunktionen zum Einsatz, die die gegebenen Brettpositionen bewerten, ohne weitere Züge in der Zukunft zu berücksichtigen\footnotemark[3].
 
-
+TODO: DEN KOMMENDEN ABSATZ ÜBERDENKEN
 \subsection{Optimierung: Alpha Beta Pruning}\label{subsec:optimierung:-alpha-beta-pruning}
-Die Laufzeit des Minimax Algorithmus ist schon bei relativ kleiner Rekursionstiefe sehr lang, da es während eines Schachspiels aus jeder Position \ca 35 mögliche Züge\footnote{Laramée, F. D. (2000): Chess Programming Part IV: Basic Search \url{https://www.gamedev.net/tutorials/_/technical/artificial-intelligence/chess-programming-part-iv-basic-search-r1171/}} gibt und somit die Anzahl an möglichen erreichbaren Positionen mit der Rekursionstiefe stark skaliert.
+Die Laufzeit des Minimax Algorithmus ist schon bei relativ kleiner Rekursionstiefe sehr lang, da es während eines Schachspiels aus jeder Position \ca 35 mögliche Züge\footnote{Laramée, F. D. (2000)  Chess Programming Part IV: Basic Search \url{https://www.gamedev.net/tutorials/_/technical/artificial-intelligence/chess-programming-part-iv-basic-search-r1171/}} gibt und somit die Anzahl an möglichen erreichbaren Positionen mit der Rekursionstiefe stark skaliert.
 Die Anzahl an möglichen Positionen, die berücksichtigt werden müssen, lässt sich, ohne das Ergebnis des Algorithmus zu verändern, durch eine Optimierung, die sich \enquote{Alpha Beta Pruning} nennt, deutlich reduzieren.
 Dabei werden zusätzlich zu der zu bewertenden Position und zu der gewollten Rekursionstiefe noch zwei weitere Parameter an den Minimax Algorithmus übergeben, die traditionell Alpha und Beta genannt werden.
 Diese beiden Parameter geben dem \enquote{Alpha Beta Pruning} seinen Namen.
 Beide Werte beschreiben jeweils die minimale Bewertung, die dem maximierenden Spieler zugesichert wird, und die maximale Bewertung, die dem minimierenden Spieler zugesichert wird.
-Dadurch können größere Teile des Suchbaumes, für die es unmöglich ist einen Einfluss auf das Ergebnis des Algorithmus zu haben, ignoriert werden \footnote{Russel S. \etal (2020): Artificial Intelligence - A Modern Approach - Fourth Edition}.
+Dadurch können größere Teile des Suchbaumes, für die es unmöglich ist einen Einfluss auf das Ergebnis des Algorithmus zu haben, ignoriert werden \footnote{Russel S. \etal (2020) Artificial Intelligence - A Modern Approach - Fourth Edition}.
 
 \section{Verschiedene Bewertungsfunktionen}\label{sec:verschiedene-bewertungsfunktionen}
 Eine gute Bewertungsfunktion zu finden, ist nun die hauptsächliche Möglichkeit das Können des Algorithmus im Schachspiel zu verbessern, daher habe ich mir verschiedene Ansätze für solche Bewertungsfunktionen überlegt, die ich im Folgenden erklären und vergleichen werde.
@@ -346,28 +342,23 @@ Eine weitere Möglichkeit, die mir eingefallen ist, um die aktuelle Position zu 
 Dafür wurden erneut die oben in~\ref{tab:Piece Values} bereits eingesetzen Werte der einzelnen Schachfiguren verwendet.
 \subsection{Piece-Square-Tables}\label{subsec:piece-tables}
 Ein Ansatz für Bewertungsfunktionen, der von vielen Schach Algorithmen benutzt wird, sind \sog \enquote{Piece-Square-Tables}.
-Hierbei wird jeder Figur für jedes der 64 Felder eines Schachbrettes ein Wert zugewiesen, der angibt, wie \enquote{gerne} diese Figur sich auf diesem Feld befindet.
+Hierbei wird jeder Figur für jedes der 64 Felder eines Schachbrettes ein Wert zugewiesen, wie \enquote{gerne} diese Figur sich auf diesem Feld befindet.
 Dabei können taktische Ideen für die einzelnen Figuren umgesetzt werden\footnote{Good, J. (1968): Machine Intelligence Vol.2 \url{https://www.doc.ic.ac.uk/~shm/MI/mi2.html} (Abgerufen 17.03.2024)}.
-Während sich meine tatsächlich verwendeten Piece-Square-Tables im Anhang~\ref{fig:piece_square_tables} befinden, erkläre ich im Folgenden, mit welchen überlegungen ich diese erstellt habe:
-\subsubsection{Bauer}
-Während die äußeren Bauern hinten bleiben sollen, um den König zu beschützen, sollen die mittleren Bauern versuchen die Mitte des Schachbrettes einzunehmen.
-Falls diese die Möglichkeit haben, die hintere Rand des Brettes zu erreichen, um sich zu anderen Figuren umzuwandeln sollten sie dies tun.
-\subsubsection{Springer}\label{subsubsec:springer}
- Die Springer sollen von den Rändern des Brettes fernbleiben, um ihre Mobilität hoch zu halten, da: \enquote{Springer am Rand bringt Kummer und Schand!}\footnote{Bekanntes Zitat unter Schachspielern, herkunft unbekannt \url{https://www.chessbazaar.de/blogs/news/die-superfigur-des-schachspiels-der-springer} (Abgerufen 17.03.2024)}
-\subsubsection{Läufer}
-Die Läufer werden ähnlich bewertet wie die Springer, da diese auch am Rand weniger effektiv sind, als in der Mitte des Brettes.
-Da bei Läufern der Nachteil am Rand allerdings verglichen mit den~\nameref{subsubsec:springer}n klein ist, sind hier die Randwerte etwas größer.
-\subsubsection{Turm}
-Die Türme sollen zunächst eine kurze \bzw lange Rochade durchführen, zudem sollten sie die Linien $ C $ und $ F $ vermeiden, da diese häufiger als die anderen Linien von Bauern blockiert werden.
-Alle anderen Linien sind gleichwertig.
-\subsubsection{Dame}
-Bei der Dame ist durch ihre hohe Mobilität ihre Position auf dem Spielfeld größtenteils irrelevant.
-Sie bekommt allerdings einen leichten Bonus, wenn sie auf ihrem Startfeld bleibt, um ein zu frühes Damenspiel zu vermeiden.
-Zudem bevorzugt sie das Stehen auf der letzten Reihe, damit Bauern die Umwandlung zu einer Dame bevorzugen.
-\subsubsection{König}
+Während sich meine tatsächlich verwendeten Piece-Square-Tables sich im Anhang~\ref{fig:piece_square_tables} befinden, erkläre im Folgenden, mit welchen überlegungen ich diese erstellt habe:
+\paragraph{Bauer}:
+Während die äußeren Bauern hinten bleiben sollen, um den König zu beschützten, sollen die mittleren Bauern  versuchen die Mitte des Schachbrettes einzunehmen, falls diese die Möglichkeit haben, die hintere Kante des Brettes zu erreichen, um sich zu anderen Figuren umzuwandeln
+\paragraph{Springer}\label{par:springer}:
+ Die Springer sollen von den Kanten des Brettes fernbleiben, um ihre Mobilität hoch zu halten, da \enquote{Springer am Rand bringt Kummer und Schand}\footnote{Bekanntes Zitat unter Schachspielern, herkunft unbekannt \url{https://www.chessbazaar.de/blogs/news/die-superfigur-des-schachspiels-der-springer} (Abgerufen 17.03.2024)}
+\paragraph{Läufer}:
+Die Läufer werden ähnlich bewertet wie die Springer, da diese auch am Rand weniger effektiv sind, als am Rande des Brettes, da bei diesen der Nachteil am Rand allerdings verglichen mit den~\nameref{par:springer}n klein ist, sind hier die Randwerte etwas größer.
+\paragraph{Turm}:
+Die Türme sollen zunächst eine kurze \bzw lange Rochade durchführen, zudem sollte sie die Linien $ C $ und $ F $ vermeiden, da diese Häufiger als die anderen von Bauern blockiert werden, alle anderen Linien sind Gleichwertig
+\paragraph{Dame}
+Der Dame ist durch ihre hohe Mobilität relativ egal, wo sie auf dem Schachbrett steht, allerdings bekommt sie einen Leichten Bonus dafür, wenn sie auf ihrem Startfeld bleibt, zudem bekommt bevorzugt sie das Stehen auf der letzetn Reihe, damit Bauern den Wechsel zu einer Dame bevorzugen.
+\paragraph{König}
 Der König bleibt vorzugsweise auf den hinteren Feldern in einer der beiden Ecken, besonders den Feldern, auf denen er nach einer Rochade landen würde.
 \subsection{Kombinierte Ansätze}\label{subsec:kombinierte-versuche}
-Da alle diese Ansätze jeweils nur Teilaspekte eines guten Schachspiels beleuchten, habe ich die verschiedenen Ansätze für die Bewertungsfunktionen wie folgt zu einer Funktion kombiniert:
+Da alle diese Ansätze jeweils nur Teileaspekte eines Guten Schachspiels beleuchten, habe ich die verschiedenen Ansätze für die Bewertungsfunktion wiefolgt zu einer Funktion Kombiniert:
 \[
 \begin{aligned}
     combined(board) & = & 0.5 & \cdot attacks(board) \\
@@ -375,55 +366,35 @@ Da alle diese Ansätze jeweils nur Teilaspekte eines guten Schachspiels beleucht
     & + & 10.0 & \cdot piece\_value(board)
 \end{aligned}
 \]
-Die Idee ist, dass die möglichen Angriffe nur wenig Einfluss auf die gesamte Bewertung einer Position haben.
-Es ist zwar gut, aber nicht das Wichtigste, viele mögliche Angriffe zu haben.
-Die Piece-Square-Table und Piece Values werden ungefähr gleich bewertet, da die Skalierungen dieser beiden Funktionen allerdings verschieden sind, werden die Figurwerte mit einem Faktor von $ 10 $ angepasst.
+Hierbei ist die Idee, dass die Mögliche Angriffe nur wenig einfluss auf die Gesamte Bewertung einer Position haben, da viele Mögliche Angriffe zu haben zwar gut ist, aber nicht das wichtigste ist.
+Die Piece-Square-Table und Piece Values werden ungefähr gleich bewertet, da die Skalierung dieser beiden Funktionen allerdings verschieden sind werden die Figurwerte mit einem Faktor von $ 10 $ skaliert.
 
 \subsection{Vergleich}\label{subsec:vergleich}
-Um nun tatsächlich herauszufinden, ob die verschiedenen Bewertungsfunktionen gut oder schlecht sind, müssen diese~\nameref{subsubsec:untereinander} verglichen werden und~\nameref{subsubsec:mit menschen} verglichen werden.
+Um nun Tatsächlich herauszufinden, ob diese verschiedenen Bewertungsfunktionen gut oder schlecht sind, müssen diese nun~\nameref{subsubsec:untereinander} und~\nameref{subsubsec:mit menschen} verglichen werden.
 
-\subsubsection{untereinander}\label{subsubsec:untereinander}
-\paragraph*{Methodik}
-Um die einzelnen Bewertungsfunktionen miteinander vergleichen zu können, habe ich ein Turnier zwischen diesen ausgetragen.
-Dabei hat der von mir programmierte Minimax Algorithmus mit jeder dieser Bewertungsfunktionen zwei mal gegen jede andere Bewertungsfunktion gespielt, einmal als Weiß und einmal als Schwarz.
-Dabei wurden jeweils die Unentschieden, Siege und Niederlagen der verschiedenen Algorithmen gespeichert und aus diesen eine Rangfolge erstellt.
-Es wurde eine Suchtiefe von 6 Halbzügen verwendet.
-\paragraph*{Ergebnisse}
-
-Leider sind die Ergebnisse dieses Turniers nicht sehr aussagekräftig über die relative Stärke der verschiedenen Algorithmen, da leider alle Spiele untereinander in einem Unentschieden geendet haben.
-Daher habe ich dieses Turnier erneut mit Suchtiefen von 5, 4, 3, 2 und 1 Halbzügen durchgeführt, da ein Turnier mit einer Suchtiefe von mehr als 6 Halbzügen nicht in einer umsetzbaren Zeit zu vollenden wäre, da ein Durchlauf mit 6 Halbzügen auf meiner Hardware bereits \ca 12 Stunden benötigt hat.
-Leider zeigten auch alle diese Turniere die selben Ergebnisse, alle Spiele endeten in einem Unentschieden.
-Auch wenn ich ein Turnier mit verschiedenen Suchtiefen gemischt habe spielen lassen: 1, 2, 3 und 4, zeigte sich das gleiche Ergebnis.
-Daraus lässt sich ableiten, dass keiner meine Bewertungsfunktionen herausragend besser ist als die anderen.
-Da alle diese Bewertungsfunktionen vollständig deterministisch sind, kommen hierbei auch jeweils immer die gleichen Ergebnisse heraus, wenn man diese Turniere erneut durchführt.
-Um etwas Vergleichbarkeit zwischen den Funktionen zu haben, habe ich alle dieser Bewertungsfunktionen mit Suchtiefen von 1, 2, 3, 4 und 5 Halbzügen jeweils gegen einen Test Algorithmus spielen lassen, der den ersten legalen Zug den er jeweils findet spielt.
-Ich habe diesen Ansatz für einen Vergleich genommen, damit der Vergleich keine Ahnung vom Schachspiel hat, aber trotzdem deterministisch ist und die Ergebnisse somit reproduzierbar sind.
-Diese Spiele endeten leider auch alle bis auf drei Spiele in einem Unentschieden.
-Interessanterweise verloren die folgenden Kombinationen aus Bewertungsfunktionen und Suchtiefen jeweils als die weißen Spieler gegen diesen Vergleichsalgorithmus:
-\begin{itemize}
-    \item Attacks mit einer Suchtiefe von 1 Halbzug
-    \item Piece-Square-Tables mit einer Suchtiefe von 2 Halbzügen
-    \item Piece-Square-Tables mit einer Suchtiefe von 3 Halbzügen
-\end{itemize}
-Aus diesem Ergebnis lassen sich allerdings auch kaum sinnvolle Informationen entnehmen, außer, dass die Piece-Square-Tables und die Anzahl an getätigten Angriffen leicht schlechter als die anderen Ansätze abschneiden.
-
-\subsubsection{mit Menschen}\label{subsubsec:mit menschen}
-Es hat sich leider gezeigt, dass beim Spielen meines Algorithmus gegen echte Menschen, einschließlich meiner Wenigkeit, keiner der in dieser Arbeit besprochenen Ansätze besonders erfolgreich darin war gut Schach zu spielen.
-Durch regelmäßige Anfängerfehler, wie das Einstellen von Figuren, war es dem Algorithmus leider nicht möglichen einen ernsthaft spielenden Menschen zu schlagen.
-Bei diesen Spielen wurde die kombinierte Bewertungsfunktion mit einer Suchtiefe von 6 Halbzügen verwendet.
-Im Folgenden finden sich einige Zitate von Menschen, die gegen diesen Algorithmus gespielt haben:
+\subsubsection{Untereinander}\label{subsubsec:untereinander}
+\paragraph{Methodik}
+Um die Einzelnen Bewertungsfunktionen miteinander Vergleichen zu können, habe ich ein Turnier zwischen diesen austragen lassen, bei dem der von mir Programmierte Minimax Algorithmus, mit jeder dieser Bewertungsfunktionen ein mal gegen jede andere Bewertungsfunktion gespielt hat.
+Dabei wurden jeweils die Unentschieden, Siege und Niederlagen der Verschiedenen Algorithmen gespeichert und daraus dann eine Rangfolge erstellt.
+Dabei habe ich jeweils eine Suchtiefe von 6 Halbzügen verwendet.
+\paragraph{Ergebnisse}
+\emph{TODO: SCHREIBEN NACHDEM FINALES TURNIER DURGELAUFEN IST}
+\subsubsection{Mit Menschen}\label{subsubsec:mit menschen}
+Beim Spielen mit mehreren Menschen, inklusive mir selbst hat sich leider gezeigt, dass keiner der in dieser Arbeit besprochenen Ansätze besonders erfolgreich darin war gut Schach zu spielen.
+Keiner der Algorithmen konnten einen Menschen in einem ernsthaft gespielten Spiel besiegen, da er leider relative Anfängerfehler regelmäßig gemacht hat.
+Bei diesen Spielen wurde die Kombinierte Bewertungsfunktion mit einer Suchtiefe von 6 Halbzügen verwendet.
+Im folgenden finden sich einige Zitate von Menschen die gegen diesen Bot gespielt haben:
 
 Lucoso: \enquote{Verzeih mir die obszöne Sprache, aber dein Bot ist scheiße}
 
 Pierre Enders: \enquote{Wurde mit 2 Damen in Zug 10 Matt gesetzt}
 
-Paul Neubach: \enquote{Eine größere Herausforderung, als erwartet. Definitiv besser als viele Beginner}
+
 
 \section{Fazit}\label{sec:fazit}
-Insgesamt hat sich leider gezeigt, dass zumindest mit den Bewertungsfunktionen, die ich mir überlegt habe, der Minimax Algorithmus für das Schachspiel nicht sehr gut geeignet ist.
-Dies liegt vermutlich daran, dass meine Implementierung, die relativ simpel und wenig Optimiert ist.
-Dadurch kann ich nur relativ kleine Suchtiefen von 5 - 6 Halbzügen erreichen, bevor die Laufzeit des Algorithmus zu lang wird, um sinnvoll gegen diesen spielen zu können.
-Durch die kleine Suchtiefe können die verschiedenen Bewertungsfunktionen nicht ihr volles Potential erreichen, da bei einer höhere Suchtiefe die Effekte einzelner Züge über einen deutlich größeren Teil des Spielverlaufes betrachtet werden können, als bei einer kleinen Suchtiefe.
+Insgesamt hat sich leider gezeigt, dass zumindest mit den Bewertungsfunktionen, die ich mir überlegt habe der Minimax Algorithmus für das Schachspiel nicht sehr gut spielen kann.
+Dies liegt vermutlich daran, dass meine Implementierung, die relativ simple und wenig Optimiert ist, dadurch kann ich nur relativ kleine Suchtiefen von $5--6$ Halbzüge erreichen, bevor die Laufzeit des Algorithmus praktisch zu lang wird.
+Durch die kleinen Suchtiefe können die verschiedenen Bewertungsfunktionen nicht ihr volles Potential erreichen, da durch eine höhere Suchtiefe die Effekte einzelner Züge über einen deutlich größeren Teil des Spielverlaufes betrachtet werden, während bei einer kleinen Suchtiefe nur die kurzzeitigen Effekte eines Zuges berücksichtigt werden.
 \newpage
 \section{Schlusserklärung}\label{sec:schlusserklarung}
 \emph{
@@ -448,25 +419,6 @@ Gelsenkirchen, den \today \\
 \end{center}
 \newpage
 
-\section{Quellenübersicht}\label{sec:quellenubersicht}
-\begin{itemize}
-    \item Offizielle Chat-GPT Website von Open-AI: \url{https://chat.openai.com/}
-    \item David Silver \etal (2017): Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm \url{https://arxiv.org/abs/1712.01815} (Abgerufen 10.03.2024)
-    \item Neumann, J. von. (1928):  Zur Theorie der Gesellschaftsspiele, Mathematische Annalen 100: S. 295--320. \url{https://eudml.org/doc/159291} (Abgerufen 10.03.2024)
-    \item Conway, J. H. (1983): Objektive Spiele und das Nimm Spiel. In: Über Zahlen und Spiele \url{https://doi.org/10.1007/978-3-322-88997-3_12} (Abgerufen 14.03.2024)
-    \item Roberts, E. \etal (2003): Stratigies and Tactics for Intelligent Seach: Algorithms - Minimax \url{https://cs.stanford.edu/people/eroberts/courses/soco/projects/2003-04/intelligent-search/minimax.html} (Abgerufen 14.03.2024)
-    \item The Rules of Chess \url{https://www.chess-chivalry.com/en/pages/rules-of-chess} (Abgerufen 14.03.2024)
-    \item FIDE LAWS of CHESS (2023): \url{https://www.fide.com/FIDE/handbook/LawsOfChess.pdf} (Abgerufen 14.03.2024)
-    \item Shannon, C (1950): Programming a Computer for Playing Chess \url{https://vision.unipv.it/IA1/ProgrammingaComputerforPlayingChess.pdf} (Abgerufen 16.02.2024)
-    \item Laramée, F. D. (2000):  Chess Programming Part IV: Basic Search \url{https://www.gamedev.net/tutorials/_/technical/artificial-intelligence/chess-programming-part-iv-basic-search-r1171/}
-    \item Russel S. \etal (2020): Artificial Intelligence - A Modern Approach - Fourth Edition
-    \item José Capablanca \etal (2006): Chess fundamentals : completely revised and updated for the 21st century \url{https://archive.org/details/chessfundamental0000capa/mode/2up} (Abgerufen 17.03.2024)
-    \item Good, J. (1968): Machine Intelligence Vol.2 \url{https://www.doc.ic.ac.uk/~shm/MI/mi2.html} (Abgerufen 17.03.2024)
-    \item \url{https://www.chessbazaar.de/blogs/news/die-superfigur-des-schachspiels-der-springer} (Abgerufen 17.03.2024)
-    \item \url{https://raphsilva.github.io/utilities/minimax_simulator/} (Verwendet 02.03.2024)
-\end{itemize}
-
-\newpage
 \section{Anhang}\label{sec:anhang}
 
 \begin{figure}[h]
@@ -475,56 +427,9 @@ Gelsenkirchen, den \today \\
     \caption{Minimax Visualisierung\protect\footnotemark }
     \label{fig:minimax-visulisation}
 \end{figure}
-\footnotetext{Eigenes Beispiel, Graphiken erstellt mit: \url{https://raphsilva.github.io/utilities/minimax_simulator/} (Verwendet 02.03.2024)}
+\footnotetext{Eigenes Beispiel, Graphiken erstellt mit: \url{https://raphsilva.github.io/utilities/minimax_simulator/}}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{./assets/minimax_visualisation/32}
-    \caption{Gesamter Baum}
-    \label{fig:minimax-visulisation-gesamt}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{subfigure}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{./assets/piece_tables/PAWN}
-        \caption{Bauer}
-    \end{subfigure}
-    \begin{subfigure}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{./assets/piece_tables/KNIGHTS}
-        \caption{Springer}
-    \end{subfigure}
-    \begin{subfigure}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{./assets/piece_tables/BISHOP}
-        \caption{Läufer}
-    \end{subfigure}
-    \begin{subfigure}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{./assets/piece_tables/ROOK}
-        \caption{Turm}
-    \end{subfigure}
-    \begin{subfigure}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{./assets/piece_tables/QUEEN}
-        \caption{Dame}
-    \end{subfigure}
-    \begin{subfigure}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{./assets/piece_tables/KING}
-        \caption{König}
-    \end{subfigure}
-    \caption{Piece Square Tables}
-    \label{fig:piece_square_tables}
-\end{figure}
-\afterpage{\FloatBarrier}
-
-\subsection{Quelltext}\label{subsec:code}
-Im Folgenden findet sich der Quelltext meiner Implementierung des Minimax-Algorithmus, sowie den in dieser Arbeit besprochenen Bewertungsfunktionen und der Steuerungscode um diesen in Schachprogrammen zu verwenden.
-Dieser Quelltext, sowie weitere Programme und Dateien, die ich beim Schreiben dieser Facharbeit erstellt haben, finden sich unter \url{https://github.com/Popaulol/facharbeit}.
-
-\input{code_include.txt}
+    \label{code}
+\label{piece_square_tables}
 
 \end{document}

@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{chess}::\PYG{p}{\PYGZob{}}\PYG{n}{Board}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Color}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Piece}\PYG{p}{\PYGZcb{};}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{color\PYGZus{}piece\PYGZus{}value}\PYG{p}{(}\PYG{n}{board}: \PYG{n+nc}{Board}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{color}: \PYG{n+nc}{Color}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{f32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{color\PYGZus{}board}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{board}\PYG{p}{.}\PYG{n}{color\PYGZus{}combined}\PYG{p}{(}\PYG{n}{color}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{queen\PYGZus{}count}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{board}\PYG{p}{.}\PYG{n}{pieces}\PYG{p}{(}\PYG{n}{Piece}::\PYG{n}{Queen}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{color\PYGZus{}board}\PYG{p}{).}\PYG{n}{popcnt}\PYG{p}{()}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k+kt}{f32}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{bishop\PYGZus{}count}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{board}\PYG{p}{.}\PYG{n}{pieces}\PYG{p}{(}\PYG{n}{Piece}::\PYG{n}{Bishop}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{color\PYGZus{}board}\PYG{p}{).}\PYG{n}{popcnt}\PYG{p}{()}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k+kt}{f32}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{knight\PYGZus{}count}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{board}\PYG{p}{.}\PYG{n}{pieces}\PYG{p}{(}\PYG{n}{Piece}::\PYG{n}{Knight}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{color\PYGZus{}board}\PYG{p}{).}\PYG{n}{popcnt}\PYG{p}{()}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k+kt}{f32}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{rock\PYGZus{}count}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{board}\PYG{p}{.}\PYG{n}{pieces}\PYG{p}{(}\PYG{n}{Piece}::\PYG{n}{Rook}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{color\PYGZus{}board}\PYG{p}{).}\PYG{n}{popcnt}\PYG{p}{()}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k+kt}{f32}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{pawn\PYGZus{}count}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{board}\PYG{p}{.}\PYG{n}{pieces}\PYG{p}{(}\PYG{n}{Piece}::\PYG{n}{Pawn}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{color\PYGZus{}board}\PYG{p}{).}\PYG{n}{popcnt}\PYG{p}{()}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k+kt}{f32}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//println!(\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}, UciMessage::Info(vec![UciInfoAttribute::String(format!(\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}, ret))]).serialize());}
+\PYG{+w}{    }\PYG{n}{queen\PYGZus{}count}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{9.0}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{bishop\PYGZus{}count}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{3.0}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{knight\PYGZus{}count}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{3.0}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{rock\PYGZus{}count}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{5.0}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{pawn\PYGZus{}count}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{piece\PYGZus{}value}\PYG{p}{(}\PYG{n}{board}: \PYG{n+nc}{Board}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{f32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{color\PYGZus{}piece\PYGZus{}value}\PYG{p}{(}\PYG{n}{board}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{board}\PYG{p}{.}\PYG{n}{side\PYGZus{}to\PYGZus{}move}\PYG{p}{())}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{color\PYGZus{}piece\PYGZus{}value}\PYG{p}{(}\PYG{n}{board}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{!}\PYG{n}{board}\PYG{p}{.}\PYG{n}{side\PYGZus{}to\PYGZus{}move}\PYG{p}{())}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,5 +1,5 @@
 def genererate_subfig(f: open, n: int):
-    f.write(r"""     \begin{subfigure}[b]{0.2\textwidth}
+    f.write(r"""     \begin{subfigure}[b]{0.25\textwidth}
          \centering
          \includegraphics[width=\textwidth]{./assets/minimax_visualisation/""" + str(n) + """}
          \caption{Schritt: """ + str(n) + """}

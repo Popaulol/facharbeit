@@ -1,0 +1,226 @@
+Started game 1 of 60 (first_possible vs piece_count d1 use_nega=True)
+Started game 2 of 60 (piece_count d1 use_nega=True vs first_possible)
+Started game 3 of 60 (first_possible vs piece_count d2 use_nega=True)
+Started game 4 of 60 (piece_count d2 use_nega=True vs first_possible)
+Started game 5 of 60 (first_possible vs piece_count d3 use_nega=True)
+Started game 6 of 60 (piece_count d3 use_nega=True vs first_possible)
+Started game 7 of 60 (first_possible vs piece_count d4 use_nega=True)
+Started game 8 of 60 (piece_count d4 use_nega=True vs first_possible)
+Started game 9 of 60 (first_possible vs piece_count d5 use_nega=True)
+Started game 10 of 60 (piece_count d5 use_nega=True vs first_possible)
+Started game 11 of 60 (first_possible vs piece_value d1 use_nega=True)
+Started game 12 of 60 (piece_value d1 use_nega=True vs first_possible)
+Started game 13 of 60 (first_possible vs piece_value d2 use_nega=True)
+Started game 14 of 60 (piece_value d2 use_nega=True vs first_possible)
+Started game 15 of 60 (first_possible vs piece_value d3 use_nega=True)
+Started game 16 of 60 (piece_value d3 use_nega=True vs first_possible)
+Finished game 6 (piece_count d3 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 17 of 60 (first_possible vs piece_value d4 use_nega=True)
+Finished game 16 (piece_value d3 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 18 of 60 (piece_value d4 use_nega=True vs first_possible)
+Finished game 3 (first_possible vs piece_count d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 19 of 60 (first_possible vs piece_value d5 use_nega=True)
+Finished game 13 (first_possible vs piece_value d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 20 of 60 (piece_value d5 use_nega=True vs first_possible)
+Finished game 5 (first_possible vs piece_count d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 21 of 60 (first_possible vs attacks d1 use_nega=True)
+Finished game 1 (first_possible vs piece_count d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 22 of 60 (attacks d1 use_nega=True vs first_possible)
+Finished game 2 (piece_count d1 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 23 of 60 (first_possible vs attacks d2 use_nega=True)
+Finished game 11 (first_possible vs piece_value d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 24 of 60 (attacks d2 use_nega=True vs first_possible)
+Finished game 12 (piece_value d1 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 25 of 60 (first_possible vs attacks d3 use_nega=True)
+Finished game 15 (first_possible vs piece_value d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 26 of 60 (attacks d3 use_nega=True vs first_possible)
+Finished game 4 (piece_count d2 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 27 of 60 (first_possible vs attacks d4 use_nega=True)
+Finished game 22 (attacks d1 use_nega=True vs first_possible): 0-1 {Black mates}
+Started game 28 of 60 (attacks d4 use_nega=True vs first_possible)
+Finished game 8 (piece_count d4 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 29 of 60 (first_possible vs attacks d5 use_nega=True)
+Finished game 26 (attacks d3 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 30 of 60 (attacks d5 use_nega=True vs first_possible)
+Finished game 18 (piece_value d4 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 31 of 60 (first_possible vs piece_tables d1 use_nega=True)
+Finished game 7 (first_possible vs piece_count d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 32 of 60 (piece_tables d1 use_nega=True vs first_possible)
+Finished game 14 (piece_value d2 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 33 of 60 (first_possible vs piece_tables d2 use_nega=True)
+Finished game 21 (first_possible vs attacks d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 34 of 60 (piece_tables d2 use_nega=True vs first_possible)
+Finished game 31 (first_possible vs piece_tables d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 35 of 60 (first_possible vs piece_tables d3 use_nega=True)
+Finished game 24 (attacks d2 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 36 of 60 (piece_tables d3 use_nega=True vs first_possible)
+Finished game 23 (first_possible vs attacks d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 37 of 60 (first_possible vs piece_tables d4 use_nega=True)
+Finished game 17 (first_possible vs piece_value d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 38 of 60 (piece_tables d4 use_nega=True vs first_possible)
+Finished game 10 (piece_count d5 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 39 of 60 (first_possible vs piece_tables d5 use_nega=True)
+Finished game 25 (first_possible vs attacks d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 40 of 60 (piece_tables d5 use_nega=True vs first_possible)
+Finished game 36 (piece_tables d3 use_nega=True vs first_possible): 0-1 {Black mates}
+Started game 41 of 60 (first_possible vs attacks_diff d1 use_nega=True)
+Finished game 34 (piece_tables d2 use_nega=True vs first_possible): 0-1 {Black mates}
+Started game 42 of 60 (attacks_diff d1 use_nega=True vs first_possible)
+Finished game 32 (piece_tables d1 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 43 of 60 (first_possible vs attacks_diff d2 use_nega=True)
+Finished game 33 (first_possible vs piece_tables d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 44 of 60 (attacks_diff d2 use_nega=True vs first_possible)
+Finished game 35 (first_possible vs piece_tables d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 45 of 60 (first_possible vs attacks_diff d3 use_nega=True)
+Finished game 43 (first_possible vs attacks_diff d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 46 of 60 (attacks_diff d3 use_nega=True vs first_possible)
+Finished game 38 (piece_tables d4 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 47 of 60 (first_possible vs attacks_diff d4 use_nega=True)
+Finished game 45 (first_possible vs attacks_diff d3 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 48 of 60 (attacks_diff d4 use_nega=True vs first_possible)
+Finished game 42 (attacks_diff d1 use_nega=True vs first_possible): 0-1 {Black mates}
+Started game 49 of 60 (first_possible vs attacks_diff d5 use_nega=True)
+Finished game 41 (first_possible vs attacks_diff d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 50 of 60 (attacks_diff d5 use_nega=True vs first_possible)
+Finished game 46 (attacks_diff d3 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 51 of 60 (first_possible vs combined d1 use_nega=True)
+Finished game 44 (attacks_diff d2 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 52 of 60 (combined d1 use_nega=True vs first_possible)
+Finished game 52 (combined d1 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 53 of 60 (first_possible vs combined d2 use_nega=True)
+Finished game 51 (first_possible vs combined d1 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 54 of 60 (combined d2 use_nega=True vs first_possible)
+Finished game 53 (first_possible vs combined d2 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 55 of 60 (first_possible vs combined d3 use_nega=True)
+Finished game 54 (combined d2 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 56 of 60 (combined d3 use_nega=True vs first_possible)
+Finished game 56 (combined d3 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 57 of 60 (first_possible vs combined d4 use_nega=True)
+Finished game 30 (attacks d5 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 58 of 60 (combined d4 use_nega=True vs first_possible)
+Finished game 37 (first_possible vs piece_tables d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 59 of 60 (first_possible vs combined d5 use_nega=True)
+Finished game 48 (attacks_diff d4 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 60 of 60 (combined d5 use_nega=True vs first_possible)
+Finished game 58 (combined d4 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 27 (first_possible vs attacks d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 55 (first_possible vs combined d3 use_nega=True): 1/2-1/2 {Draw by fifty moves rule}
+Finished game 40 (piece_tables d5 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 60 (combined d5 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 47 (first_possible vs attacks_diff d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 20 (piece_value d5 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 19 (first_possible vs piece_value d5 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 28 (attacks d4 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 50 (attacks_diff d5 use_nega=True vs first_possible): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 9 (first_possible vs piece_count d5 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 57 (first_possible vs combined d4 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 39 (first_possible vs piece_tables d5 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 29 (first_possible vs attacks d5 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 49 (first_possible vs attacks_diff d5 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Finished game 59 (first_possible vs combined d5 use_nega=True): 1/2-1/2 {Draw by 3-fold repetition}
+Rank Name                          Elo     +/-   Games   Score    Draw 
+   0 first_possible                 23      22      60   53.3%   93.3% 
+   1 combined d5 use_nega=True       0       0       2   50.0%  100.0% 
+   2 combined d4 use_nega=True       0       0       2   50.0%  100.0% 
+   3 combined d3 use_nega=True       0       0       2   50.0%  100.0% 
+   4 combined d2 use_nega=True       0       0       2   50.0%  100.0% 
+   5 combined d1 use_nega=True       0       0       2   50.0%  100.0% 
+   6 attacks_diff d5 use_nega=True       0       0       2   50.0%  100.0% 
+   7 attacks_diff d4 use_nega=True       0       0       2   50.0%  100.0% 
+   8 attacks_diff d3 use_nega=True       0       0       2   50.0%  100.0% 
+   9 attacks_diff d2 use_nega=True       0       0       2   50.0%  100.0% 
+  10 piece_tables d5 use_nega=True       0       0       2   50.0%  100.0% 
+  11 piece_tables d4 use_nega=True       0       0       2   50.0%  100.0% 
+  12 piece_tables d1 use_nega=True       0       0       2   50.0%  100.0% 
+  13 attacks d5 use_nega=True        0       0       2   50.0%  100.0% 
+  14 attacks d4 use_nega=True        0       0       2   50.0%  100.0% 
+  15 attacks d3 use_nega=True        0       0       2   50.0%  100.0% 
+  16 attacks d2 use_nega=True        0       0       2   50.0%  100.0% 
+  17 piece_value d5 use_nega=True       0       0       2   50.0%  100.0% 
+  18 piece_value d4 use_nega=True       0       0       2   50.0%  100.0% 
+  19 piece_value d3 use_nega=True       0       0       2   50.0%  100.0% 
+  20 piece_value d2 use_nega=True       0       0       2   50.0%  100.0% 
+  21 piece_value d1 use_nega=True       0       0       2   50.0%  100.0% 
+  22 piece_count d5 use_nega=True       0       0       2   50.0%  100.0% 
+  23 piece_count d4 use_nega=True       0       0       2   50.0%  100.0% 
+  24 piece_count d3 use_nega=True       0       0       2   50.0%  100.0% 
+  25 piece_count d2 use_nega=True       0       0       2   50.0%  100.0% 
+  26 piece_count d1 use_nega=True       0       0       2   50.0%  100.0% 
+  27 attacks_diff d1 use_nega=True    -191     nan       2   25.0%   50.0% 
+  28 piece_tables d3 use_nega=True    -191     nan       2   25.0%   50.0% 
+  29 piece_tables d2 use_nega=True    -191     nan       2   25.0%   50.0% 
+  30 attacks d1 use_nega=True     -191     nan       2   25.0%   50.0% 
+
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: first_possible
+   "Draw by 3-fold repetition": 55
+   "Draw by fifty moves rule": 1
+   "Win: Black mates": 4
+Player: piece_count d1 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_count d2 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_count d3 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_count d4 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_count d5 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_value d1 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_value d2 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_value d3 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_value d4 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_value d5 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: attacks d1 use_nega=True
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+Player: attacks d2 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: attacks d3 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: attacks d4 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: attacks d5 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_tables d1 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_tables d2 use_nega=True
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+Player: piece_tables d3 use_nega=True
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+Player: piece_tables d4 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: piece_tables d5 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: attacks_diff d1 use_nega=True
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+Player: attacks_diff d2 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: attacks_diff d3 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: attacks_diff d4 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: attacks_diff d5 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: combined d1 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: combined d2 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: combined d3 use_nega=True
+   "Draw by 3-fold repetition": 1
+   "Draw by fifty moves rule": 1
+Player: combined d4 use_nega=True
+   "Draw by 3-fold repetition": 2
+Player: combined d5 use_nega=True
+   "Draw by 3-fold repetition": 2
+Finished match
+cutechess-cli -tournament gauntlet -rounds 1 -games 2 -concurrency 16 -each proto=uci tc=inf -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="first_possible" option.EvalFunction=combined option.Depth=0 option.use_negamax=false -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_count d1 use_nega=True" option.EvalFunction=piece_count option.Depth=1 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_count d2 use_nega=True" option.EvalFunction=piece_count option.Depth=2 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_count d3 use_nega=True" option.EvalFunction=piece_count option.Depth=3 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_count d4 use_nega=True" option.EvalFunction=piece_count option.Depth=4 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_count d5 use_nega=True" option.EvalFunction=piece_count option.Depth=5 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_value d1 use_nega=True" option.EvalFunction=piece_value option.Depth=1 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_value d2 use_nega=True" option.EvalFunction=piece_value option.Depth=2 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_value d3 use_nega=True" option.EvalFunction=piece_value option.Depth=3 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_value d4 use_nega=True" option.EvalFunction=piece_value option.Depth=4 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_value d5 use_nega=True" option.EvalFunction=piece_value option.Depth=5 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="attacks d1 use_nega=True" option.EvalFunction=attacks option.Depth=1 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="attacks d2 use_nega=True" option.EvalFunction=attacks option.Depth=2 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="attacks d3 use_nega=True" option.EvalFunction=attacks option.Depth=3 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="attacks d4 use_nega=True" option.EvalFunction=attacks option.Depth=4 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="attacks d5 use_nega=True" option.EvalFunction=attacks option.Depth=5 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_tables d1 use_nega=True" option.EvalFunction=piece_tables option.Depth=1 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_tables d2 use_nega=True" option.EvalFunction=piece_tables option.Depth=2 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_tables d3 use_nega=True" option.EvalFunction=piece_tables option.Depth=3 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_tables d4 use_nega=True" option.EvalFunction=piece_tables option.Depth=4 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="piece_tables d5 use_nega=True" option.EvalFunction=piece_tables option.Depth=5 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="attacks_diff d1 use_nega=True" option.EvalFunction=attacks_diff option.Depth=1 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="attacks_diff d2 use_nega=True" option.EvalFunction=attacks_diff option.Depth=2 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="attacks_diff d3 use_nega=True" option.EvalFunction=attacks_diff option.Depth=3 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="attacks_diff d4 use_nega=True" option.EvalFunction=attacks_diff option.Depth=4 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="attacks_diff d5 use_nega=True" option.EvalFunction=attacks_diff option.Depth=5 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="combined d1 use_nega=True" option.EvalFunction=combined option.Depth=1 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="combined d2 use_nega=True" option.EvalFunction=combined option.Depth=2 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="combined d3 use_nega=True" option.EvalFunction=combined option.Depth=3 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="combined d4 use_nega=True" option.EvalFunction=combined option.Depth=4 option.use_negamax=true -engine cmd="/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/target/release/facharbeit" name="combined d5 use_nega=True" option.EvalFunction=combined option.Depth=5 option.use_negamax=true

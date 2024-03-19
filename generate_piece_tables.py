@@ -1,3 +1,6 @@
+from PIL import Image, ImageDraw, ImageFont
+from itertools import cycle
+
 piece_tables = {
     "PAWN": [0, 0, 0, 0, 0, 0, 0, 0,
              50, 50, 50, 50, 50, 50, 50, 50,
@@ -53,7 +56,31 @@ piece_tables = {
              0, 0, 0, 10, 0, 0, 0, 0],
 }
 
+width = 500
 if __name__ == '__main__':
-
+    fnt = ImageFont.load_default(30)
     for name, table in piece_tables.items():
         print(f"const {name}_TABLE: [f32; 64] = [{','.join(str(float(score)) for score in table)}];")
+
+        im = Image.new(mode="RGB", size=(width, width))
+
+        d = ImageDraw.Draw(im)
+
+        squares = (list(map(lambda i: i*width / 8, [i, j, i+1, j+1]))
+                   for i_start, j in zip(cycle((0, 1)), range(8))
+                   for i in range(i_start, 8, 2))
+
+        for sq, value in zip(squares, table[::2]):
+            d.rectangle(sq, fill='white')
+            d.multiline_text(sq[:2], str(value), font=fnt, fill=(0, 0, 0))
+
+        squares = (list(map(lambda i: i*width / 8, [i, j, i+1, j+1]))
+                   for i_start, j in zip(cycle((1, 0)), range(8))
+                   for i in range(i_start, 8, 2))
+
+        for sq, value in zip(squares, table[1::2]):
+            #d.rectangle(sq, fill='white')
+            d.multiline_text(sq[:2], str(value), font=fnt, fill=(255, 255, 255))
+
+        # im.show()
+        im.save(f"./assets/piece_tables/{name}.png")

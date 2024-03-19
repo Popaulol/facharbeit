@@ -1,0 +1,44 @@
+\subsubsection*{src/uci.rs}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/uci.rs}
+\newpage
+
+\subsubsection*{src/main.rs}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/main.rs}
+\newpage
+
+\subsubsection*{src/minimax.rs}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/minimax.rs}
+\newpage
+
+\subsubsection*{src/cli.rs}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/cli.rs}
+\newpage
+
+\subsubsection*{src/evaluation\_functions/attacks.rs}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/evaluation_functions/attacks.rs}
+\newpage
+
+\subsubsection*{src/evaluation\_functions/combined.rs}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/evaluation_functions/combined.rs}
+\newpage
+
+\subsubsection*{src/evaluation\_functions/piece\_count.rs}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/evaluation_functions/piece_count.rs}
+\newpage
+
+\subsubsection*{src/evaluation\_functions/piece\_value.rs}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/evaluation_functions/piece_value.rs}
+\newpage
+
+\subsubsection*{src/evaluation\_functions/piece\_tables.rs}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/evaluation_functions/piece_tables.rs}
+\newpage
+
+\subsubsection*{src/evaluation\_functions/mod.rs}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{rust}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/src/evaluation_functions/mod.rs}
+\newpage
+
+\subsubsection*{Cargo.toml}
+\inputminted[linenos=true, breaklines=true, breakautoindent=true]{toml}{/home/Strawby/Schulsachen/Q1/Informatik/facharbeit/Cargo.toml}
+\newpage
+

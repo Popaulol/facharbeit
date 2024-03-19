@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{chess}::\PYG{p}{\PYGZob{}}\PYG{n}{Board}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{MoveGen}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Piece}\PYG{p}{\PYGZcb{};}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{attacks}\PYG{p}{(}\PYG{n}{board}: \PYG{n+nc}{Board}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{f32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{iterator}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{MoveGen}::\PYG{n}{new\PYGZus{}legal}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{board}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{moves}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{iterator}\PYG{p}{.}\PYG{n}{map}\PYG{p}{(}\PYG{o}{|}\PYG{n}{m}\PYG{o}{|}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{piece}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{board}\PYG{p}{.}\PYG{n}{piece\PYGZus{}on}\PYG{p}{(}\PYG{n}{m}\PYG{p}{.}\PYG{n}{get\PYGZus{}dest}\PYG{p}{())}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{piece}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n}{Piece}::\PYG{n}{Pawn}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{Piece}::\PYG{n}{Knight}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mf}{3.0}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{Piece}::\PYG{n}{Bishop}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mf}{3.0}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{Piece}::\PYG{n}{Rook}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mf}{5.0}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{Piece}::\PYG{n}{Queen}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mf}{9.0}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{Piece}::\PYG{n}{King}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mf}{100.0}\PYG{p}{,}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{l+m+mf}{0.0}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+\PYG{+w}{    }\PYG{n}{moves}\PYG{p}{.}\PYG{n}{sum}\PYG{p}{()}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{attacks\PYGZus{}diff}\PYG{p}{(}\PYG{n}{board}: \PYG{n+nc}{Board}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{f32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{enemy\PYGZus{}attacks}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{board}\PYG{p}{.}\PYG{n}{null\PYGZus{}move}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nb}{None}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k+kt}{f32}::\PYG{n}{INFINITY}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{enemy\PYGZus{}board}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{attacks}\PYG{p}{(}\PYG{n}{enemy\PYGZus{}board}\PYG{p}{),}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{    }\PYG{n}{attacks}\PYG{p}{(}\PYG{n}{board}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{enemy\PYGZus{}attacks}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

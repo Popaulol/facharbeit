@@ -1,0 +1,354 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{io}::\PYG{n}{stderr}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{io}::\PYG{n}{Write}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{k+kt}{str}::\PYG{n}{FromStr}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{sync}::\PYG{p}{\PYGZob{}}\PYG{n}{Arc}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Mutex}\PYG{p}{\PYGZcb{};}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{thread}::\PYG{n}{sleep}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{p}{\PYGZob{}}\PYG{n}{io}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{thread}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{time}\PYG{p}{\PYGZcb{};}
+
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{chess}::\PYG{p}{\PYGZob{}}\PYG{n}{Board}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ChessMove}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Color}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Game}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{MoveGen}\PYG{p}{\PYGZcb{};}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{vampirc\PYGZus{}uci}::\PYG{p}{\PYGZob{}}\PYG{n}{parse}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Serializable}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UciInfoAttribute}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UciMessage}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UciOptionConfig}\PYG{p}{\PYGZcb{};}
+
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{evaluation\PYGZus{}functions}::\PYG{n}{attacks}::\PYG{p}{\PYGZob{}}\PYG{n}{attacks}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{attacks\PYGZus{}diff}\PYG{p}{\PYGZcb{};}
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{evaluation\PYGZus{}functions}::\PYG{n}{combined}::\PYG{n}{combined}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{evaluation\PYGZus{}functions}::\PYG{n}{piece\PYGZus{}count}::\PYG{n}{piece\PYGZus{}count}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{evaluation\PYGZus{}functions}::\PYG{n}{piece\PYGZus{}tables}::\PYG{n}{piece\PYGZus{}tables}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{evaluation\PYGZus{}functions}::\PYG{n}{piece\PYGZus{}value}::\PYG{n}{piece\PYGZus{}value}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{message}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{minimax}::\PYG{p}{\PYGZob{}}\PYG{n}{minimax\PYGZus{}ab}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{negamax}\PYG{p}{\PYGZcb{};}
+
+\PYG{c+cp}{\PYGZsh{}[derive(Debug)]}
+\PYG{k}{enum} \PYG{n+nc}{EvalFunction}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{PieceCount}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{PieceValue}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Attacks}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{PieceTables}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{AttacksDiff}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Combined}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+cp}{\PYGZsh{}[derive(Debug)]}
+\PYG{k}{struct} \PYG{n+nc}{SharedState}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{game}: \PYG{n+nc}{Game}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{eval\PYGZus{}function}: \PYG{n+nc}{EvalFunction}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{depth}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{use\PYGZus{}negamax}: \PYG{k+kt}{bool}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}: \PYG{k+kt}{bool}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{run\PYGZus{}engine\PYGZus{}thread}\PYG{o}{\PYGZlt{}}\PYG{n}{F}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{state}: \PYG{n+nc}{Arc}\PYG{o}{\PYGZlt{}}\PYG{n}{Mutex}\PYG{o}{\PYGZlt{}}\PYG{n}{SharedState}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{evaluation\PYGZus{}function}: \PYG{n+nc}{F}\PYG{p}{)}
+\PYG{k}{where}
+\PYG{+w}{    }\PYG{n}{F}: \PYG{n+nb}{Fn}\PYG{p}{(}\PYG{n}{Board}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{f32} \PYG{o}{+}\PYG{+w}{ }\PYG{n+nb}{Copy}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nb}{Send}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nb}{Sync}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{o}{\PYGZsq{}}\PYG{n+nb}{static}\PYG{p}{,}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{thread}::\PYG{n}{spawn}\PYG{p}{(}\PYG{k}{move}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{sleep}\PYG{p}{(}\PYG{n}{time}::\PYG{n}{Duration}::\PYG{n}{from\PYGZus{}secs\PYGZus{}f64}\PYG{p}{(}\PYG{l+m+mf}{0.1}\PYG{p}{));}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{game}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{game}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{()}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{board}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{game}\PYG{p}{.}\PYG{n}{current\PYGZus{}position}\PYG{p}{();}
+
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{depth}: \PYG{k+kt}{i32} \PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{depth}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{use\PYGZus{}negamax}: \PYG{k+kt}{bool} \PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{use\PYGZus{}negamax}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{        }
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}: \PYG{k+kt}{bool} \PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{        }
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{moves}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{MoveGen}::\PYG{n}{new\PYGZus{}legal}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{board}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n+nf+fm}{println!}\PYG{p}{(}
+\PYG{+w}{                }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{BestMove}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{best\PYGZus{}move}: \PYG{n+nc}{moves}\PYG{p}{.}\PYG{n}{next}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{(),}
+\PYG{+w}{                    }\PYG{n}{ponder}: \PYG{n+nb}{None}\PYG{p}{,}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                    }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
+\PYG{+w}{            }\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{o}{!}\PYG{n}{use\PYGZus{}negamax}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{c+c1}{//message(\PYGZdq{}Nega\PYGZdq{}, \PYGZdq{}false\PYGZdq{});}
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{moves}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{MoveGen}::\PYG{n}{new\PYGZus{}legal}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{board}\PYG{p}{);}
+
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{best\PYGZus{}move\PYGZus{}score}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{f32}::\PYG{n}{NEG\PYGZus{}INFINITY}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{best\PYGZus{}move}: \PYG{n+nc}{ChessMove}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{moves}\PYG{p}{.}\PYG{n}{next}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}
+\PYG{+w}{                }\PYG{l+s}{\PYGZdq{}If there aren\PYGZsq{}t any moves, something has gone quite Wrong with the driver\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{            }\PYG{p}{);}
+\PYG{+w}{            }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{m}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{moves}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{score}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{minimax\PYGZus{}ab}\PYG{p}{(}\PYG{n}{board}\PYG{p}{.}\PYG{n}{make\PYGZus{}move\PYGZus{}new}\PYG{p}{(}\PYG{n}{m}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{depth}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{evaluation\PYGZus{}function}\PYG{p}{);}
+\PYG{+w}{                }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{score}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{board}\PYG{p}{.}\PYG{n}{side\PYGZus{}to\PYGZus{}move}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{Color}::\PYG{n}{White}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{score}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{o}{\PYGZhy{}}\PYG{n}{score}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{                }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{score}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{best\PYGZus{}move\PYGZus{}score}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{best\PYGZus{}move}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{m}\PYG{p}{;}
+\PYG{+w}{                    }\PYG{n}{best\PYGZus{}move\PYGZus{}score}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{score}\PYG{p}{;}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{n+nf+fm}{println!}\PYG{p}{(}
+\PYG{+w}{                }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Info}\PYG{p}{(}\PYG{n+nf+fm}{vec!}\PYG{p}{[}\PYG{n}{UciInfoAttribute}::\PYG{n}{Score}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{cp}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{best\PYGZus{}move\PYGZus{}score}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{p}{),}
+\PYG{+w}{                    }\PYG{n}{mate}: \PYG{n+nb}{None}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{n}{lower\PYGZus{}bound}: \PYG{n+nb}{None}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{n}{upper\PYGZus{}bound}: \PYG{n+nb}{None}\PYG{p}{,}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}])}
+\PYG{+w}{            }\PYG{p}{);}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{best\PYGZus{}move}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{ChessMove}::\PYG{n}{default}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n}{message}\PYG{p}{(}
+\PYG{+w}{                    }\PYG{n+nf+fm}{format!}\PYG{p}{(}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}\PYGZob{}:?\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZob{}:?\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZob{}:?\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{(),}
+\PYG{+w}{                        }\PYG{n}{best\PYGZus{}move}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{MoveGen}::\PYG{n}{new\PYGZus{}legal}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{board}\PYG{p}{).}\PYG{n}{len}\PYG{p}{()}
+\PYG{+w}{                    }\PYG{p}{)}
+\PYG{+w}{                    }\PYG{p}{.}\PYG{n}{as\PYGZus{}str}\PYG{p}{(),}
+\PYG{+w}{                }\PYG{p}{);}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{n+nf+fm}{println!}\PYG{p}{(}
+\PYG{+w}{                }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{BestMove}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{best\PYGZus{}move}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{n}{ponder}: \PYG{n+nb}{None}\PYG{p}{,}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
+\PYG{+w}{            }\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{c+c1}{//message(\PYGZdq{}Nega\PYGZdq{}, \PYGZdq{}true\PYGZdq{});}
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{moves}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{MoveGen}::\PYG{n}{new\PYGZus{}legal}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{board}\PYG{p}{);}
+
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{best\PYGZus{}move\PYGZus{}score}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{f32}::\PYG{n}{NEG\PYGZus{}INFINITY}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{best\PYGZus{}move}: \PYG{n+nc}{ChessMove}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{moves}\PYG{p}{.}\PYG{n}{next}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}
+\PYG{+w}{                }\PYG{l+s}{\PYGZdq{}If there aren\PYGZsq{}t any moves, something has gone quite Wrong with the driver\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{            }\PYG{p}{);}
+\PYG{+w}{            }\PYG{c+c1}{//message(\PYGZdq{}Nega\PYGZdq{}, \PYGZdq{}true\PYGZdq{});}
+\PYG{+w}{            }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{m}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{moves}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{c+c1}{//message(\PYGZdq{}Nega true\PYGZdq{}, format!(\PYGZdq{}\PYGZob{}:?\PYGZcb{}\PYGZdq{}, m).as\PYGZus{}str());}
+\PYG{+w}{                }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{new\PYGZus{}game}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{game}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{();}
+\PYG{+w}{                }\PYG{n}{new\PYGZus{}game}\PYG{p}{.}\PYG{n}{make\PYGZus{}move}\PYG{p}{(}\PYG{n}{m}\PYG{p}{);}
+\PYG{+w}{                }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{score}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{negamax}\PYG{p}{(}\PYG{n}{new\PYGZus{}game}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{depth}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{evaluation\PYGZus{}function}\PYG{p}{);}
+\PYG{+w}{                }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{score}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{board}\PYG{p}{.}\PYG{n}{side\PYGZus{}to\PYGZus{}move}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{Color}::\PYG{n}{White}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{score}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{o}{\PYGZhy{}}\PYG{n}{score}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{                }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{score}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{best\PYGZus{}move\PYGZus{}score}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{best\PYGZus{}move}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{m}\PYG{p}{;}
+\PYG{+w}{                    }\PYG{n}{best\PYGZus{}move\PYGZus{}score}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{score}\PYG{p}{;}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{c+c1}{//message(\PYGZdq{}Nega\PYGZdq{}, \PYGZdq{}true\PYGZdq{});}
+\PYG{+w}{            }\PYG{n+nf+fm}{println!}\PYG{p}{(}
+\PYG{+w}{                }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Info}\PYG{p}{(}\PYG{n+nf+fm}{vec!}\PYG{p}{[}\PYG{n}{UciInfoAttribute}::\PYG{n}{Score}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{cp}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{best\PYGZus{}move\PYGZus{}score}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{p}{),}
+\PYG{+w}{                    }\PYG{n}{mate}: \PYG{n+nb}{None}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{n}{lower\PYGZus{}bound}: \PYG{n+nb}{None}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{n}{upper\PYGZus{}bound}: \PYG{n+nb}{None}\PYG{p}{,}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}])}
+\PYG{+w}{            }\PYG{p}{);}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{best\PYGZus{}move}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{ChessMove}::\PYG{n}{default}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n}{message}\PYG{p}{(}
+\PYG{+w}{                    }\PYG{n+nf+fm}{format!}\PYG{p}{(}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}\PYGZob{}:?\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZob{}:?\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZob{}:?\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{(),}
+\PYG{+w}{                        }\PYG{n}{best\PYGZus{}move}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{MoveGen}::\PYG{n}{new\PYGZus{}legal}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{board}\PYG{p}{).}\PYG{n}{len}\PYG{p}{()}
+\PYG{+w}{                    }\PYG{p}{)}
+\PYG{+w}{                    }\PYG{p}{.}\PYG{n}{as\PYGZus{}str}\PYG{p}{(),}
+\PYG{+w}{                }\PYG{p}{);}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{n+nf+fm}{println!}\PYG{p}{(}
+\PYG{+w}{                }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{BestMove}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{best\PYGZus{}move}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{n}{ponder}: \PYG{n+nb}{None}\PYG{p}{,}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
+\PYG{+w}{            }\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{pub}\PYG{p}{(}\PYG{k}{crate}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{uci\PYGZus{}main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{state}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Arc}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Mutex}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{SharedState}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{game}: \PYG{n+nc}{Game}::\PYG{n}{new}\PYG{p}{(),}
+\PYG{+w}{        }\PYG{n}{eval\PYGZus{}function}: \PYG{n+nc}{EvalFunction}::\PYG{n}{PieceCount}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{depth}: \PYG{l+m+mi}{3}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{use\PYGZus{}negamax}: \PYG{n+nc}{false}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}: \PYG{n+nc}{false}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}));}
+\PYG{+w}{    }\PYG{o}{\PYGZsq{}}\PYG{n+na}{input}: \PYG{n+nc}{loop}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{buf}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{new}\PYG{p}{();}
+\PYG{+w}{        }\PYG{n}{io}::\PYG{n}{stdin}\PYG{p}{()}
+\PYG{+w}{            }\PYG{p}{.}\PYG{n}{read\PYGZus{}line}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{buf}\PYG{p}{)}
+\PYG{+w}{            }\PYG{p}{.}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Reading from stdin failed\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{messages}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{parse}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{buf}\PYG{p}{);}
+\PYG{+w}{        }\PYG{c+c1}{//message(\PYGZdq{}Message Loop\PYGZdq{}, format!(\PYGZdq{}\PYGZob{}:?\PYGZcb{} \PYGZob{}:?\PYGZcb{}\PYGZdq{}, messages, state.lock().unwrap()).as\PYGZus{}str());}
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{message}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{messages}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nf+fm}{writeln!}\PYG{p}{(}\PYG{n}{stderr}\PYG{p}{(),}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{message}\PYG{p}{).}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}TODO: panic message\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{message}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Uci}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nf+fm}{println!}\PYG{p}{(}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{UciMessage}::\PYG{n}{Id}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                            }\PYG{n}{name}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Strawberry Chess\PYGZdq{}}\PYG{p}{.}\PYG{n}{parse}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{()),}
+\PYG{+w}{                            }\PYG{n}{author}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Strawberry Fragemann\PYGZdq{}}\PYG{p}{.}\PYG{n}{parse}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{()),}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                        }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
+\PYG{+w}{                    }\PYG{p}{);}
+\PYG{+w}{                    }\PYG{n+nf+fm}{println!}\PYG{p}{(}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{UciMessage}::\PYG{n+nb}{Option}\PYG{p}{(}\PYG{n}{UciOptionConfig}::\PYG{n}{Combo}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                            }\PYG{n}{name}: \PYG{l+s}{\PYGZdq{}EvalFunction\PYGZdq{}}\PYG{p}{.}\PYG{n}{to\PYGZus{}string}\PYG{p}{(),}
+\PYG{+w}{                            }\PYG{n}{default}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}piece\PYGZus{}value\PYGZdq{}}\PYG{p}{.}\PYG{n}{into}\PYG{p}{()),}
+\PYG{+w}{                            }\PYG{n}{var}: \PYG{n+nc}{vec}\PYG{o}{!}\PYG{p}{[}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}piece\PYGZus{}count\PYGZdq{}}\PYG{p}{.}\PYG{n}{into}\PYG{p}{(),}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}piece\PYGZus{}value\PYGZdq{}}\PYG{p}{.}\PYG{n}{into}\PYG{p}{(),}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}attacks\PYGZdq{}}\PYG{p}{.}\PYG{n}{into}\PYG{p}{(),}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}attacks\PYGZus{}diff\PYGZdq{}}\PYG{p}{.}\PYG{n}{into}\PYG{p}{(),}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}piece\PYGZus{}tables\PYGZdq{}}\PYG{p}{.}\PYG{n}{into}\PYG{p}{(),}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}combined\PYGZdq{}}\PYG{p}{.}\PYG{n}{into}\PYG{p}{(),}
+\PYG{+w}{                            }\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{})}
+\PYG{+w}{                        }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
+\PYG{+w}{                    }\PYG{p}{);}
+\PYG{+w}{                    }\PYG{n+nf+fm}{println!}\PYG{p}{(}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{UciMessage}::\PYG{n+nb}{Option}\PYG{p}{(}\PYG{n}{UciOptionConfig}::\PYG{n}{Spin}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                            }\PYG{n}{name}: \PYG{l+s}{\PYGZdq{}Depth\PYGZdq{}}\PYG{p}{.}\PYG{n}{to\PYGZus{}string}\PYG{p}{(),}
+\PYG{+w}{                            }\PYG{n}{default}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{),}
+\PYG{+w}{                            }\PYG{n}{min}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{),}
+\PYG{+w}{                            }\PYG{n}{max}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{),}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{})}
+\PYG{+w}{                        }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
+\PYG{+w}{                    }\PYG{p}{);}
+\PYG{+w}{                    }\PYG{n+nf+fm}{println!}\PYG{p}{(}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{UciMessage}::\PYG{n+nb}{Option}\PYG{p}{(}\PYG{n}{UciOptionConfig}::\PYG{n}{Check}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                            }\PYG{n}{name}: \PYG{l+s}{\PYGZdq{}use\PYGZus{}negamax\PYGZdq{}}\PYG{p}{.}\PYG{n}{to\PYGZus{}string}\PYG{p}{(),}
+\PYG{+w}{                            }\PYG{n}{default}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{k+kc}{false}\PYG{p}{),}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{})}
+\PYG{+w}{                        }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
+\PYG{+w}{                    }\PYG{p}{);}
+\PYG{+w}{                    }\PYG{n+nf+fm}{println!}\PYG{p}{(}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{UciMessage}::\PYG{n+nb}{Option}\PYG{p}{(}\PYG{n}{UciOptionConfig}::\PYG{n}{Check}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                            }\PYG{n}{name}: \PYG{l+s}{\PYGZdq{}first\PYGZus{}possible\PYGZus{}moves\PYGZdq{}}\PYG{p}{.}\PYG{n}{to\PYGZus{}string}\PYG{p}{(),}
+\PYG{+w}{                            }\PYG{n}{default}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{k+kc}{false}\PYG{p}{),}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{})}
+\PYG{+w}{                            }\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{()}
+\PYG{+w}{                    }\PYG{p}{);}
+\PYG{+w}{                    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UciMessage}::\PYG{n}{UciOk}\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{());}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Debug}\PYG{p}{(}\PYG{n}{\PYGZus{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{IsReady}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UciMessage}::\PYG{n}{ReadyOk}\PYG{p}{.}\PYG{n}{serialize}\PYG{p}{());}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Register}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{o}{..}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nf+fm}{todo!}\PYG{p}{()}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Position}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{startpos}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{n}{fen}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{n}{moves}\PYG{p}{,}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{                    }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{startpos}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                        }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{game}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Game}::\PYG{n}{new}\PYG{p}{()}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{fen}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{fen}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                        }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{game}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{                            }\PYG{n}{Game}::\PYG{n}{from\PYGZus{}str}\PYG{p}{(}\PYG{n}{fen}\PYG{p}{.}\PYG{n}{as\PYGZus{}str}\PYG{p}{()).}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Chess engine Send Invalid fen\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                        }\PYG{n+nf+fm}{panic!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Neither startpos nor fen was supplied!\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{                    }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{m}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{moves}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                        }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{game}\PYG{p}{.}\PYG{n}{make\PYGZus{}move}\PYG{p}{(}\PYG{n}{m}\PYG{p}{);}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{SetOption}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{value}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{.}\PYG{n}{as\PYGZus{}str}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{l+s}{\PYGZdq{}EvalFunction\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{                        }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{eval\PYGZus{}function}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{                            }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{value}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}This needs to have a value\PYGZdq{}}\PYG{p}{).}\PYG{n}{as\PYGZus{}str}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}piece\PYGZus{}count\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{EvalFunction}::\PYG{n}{PieceCount}\PYG{p}{,}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}piece\PYGZus{}value\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{EvalFunction}::\PYG{n}{PieceValue}\PYG{p}{,}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}attacks\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{EvalFunction}::\PYG{n}{Attacks}\PYG{p}{,}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}attacks\PYGZus{}diff\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{EvalFunction}::\PYG{n}{AttacksDiff}\PYG{p}{,}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}piece\PYGZus{}tables\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{EvalFunction}::\PYG{n}{PieceTables}\PYG{p}{,}
+\PYG{+w}{                                }\PYG{l+s}{\PYGZdq{}combined\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{EvalFunction}::\PYG{n}{Combined}\PYG{p}{,}
+\PYG{+w}{                                }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                                    }\PYG{n+nf+fm}{panic!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Unkown Eval Function \PYGZob{}:?\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{value}\PYG{p}{)}
+\PYG{+w}{                                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                    }\PYG{l+s}{\PYGZdq{}Depth\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{                        }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{depth}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{value}\PYG{p}{.}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}This needs to have a value\PYGZdq{}}\PYG{p}{).}\PYG{n}{parse}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{()}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                    }\PYG{l+s}{\PYGZdq{}use\PYGZus{}negamax\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{                        }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{use\PYGZus{}negamax}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{value}\PYG{p}{.}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}This needs to have a value\PYGZdq{}}\PYG{p}{).}\PYG{n}{as\PYGZus{}str}\PYG{p}{()}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                            }\PYG{l+s}{\PYGZdq{}true\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{,}
+\PYG{+w}{                            }\PYG{l+s}{\PYGZdq{}false\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{,}
+\PYG{+w}{                            }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{panic!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}invalid value\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{                        }\PYG{c+c1}{// crate::message(file!(), lock.use\PYGZus{}negamax.to\PYGZus{}string().as\PYGZus{}str());}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                    }\PYG{l+s}{\PYGZdq{}first\PYGZus{}possible\PYGZus{}moves\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{                        }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{first\PYGZus{}possible\PYGZus{}moves}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{value}\PYG{p}{.}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}This needs to have a value\PYGZdq{}}\PYG{p}{).}\PYG{n}{as\PYGZus{}str}\PYG{p}{()}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                            }\PYG{l+s}{\PYGZdq{}true\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{,}
+\PYG{+w}{                            }\PYG{l+s}{\PYGZdq{}false\PYGZdq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{,}
+\PYG{+w}{                            }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{panic!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}invalid value\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                    }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                        }\PYG{n+nf+fm}{panic!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Unkown Option \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{)}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{UciNewGame}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Stop}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{PonderHit}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Quit}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k}{break}\PYG{+w}{ }\PYG{n+nl}{\PYGZsq{}input}\PYG{p}{,}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Go}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n}{time\PYGZus{}control}: \PYG{n+nc}{\PYGZus{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{n}{search\PYGZus{}control}: \PYG{n+nc}{\PYGZus{}}\PYG{p}{,}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{lock}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Concurrency Error I guess\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{                    }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{lock}\PYG{p}{.}\PYG{n}{eval\PYGZus{}function}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                        }\PYG{n}{EvalFunction}::\PYG{n}{PieceCount}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{run\PYGZus{}engine\PYGZus{}thread}\PYG{p}{(}\PYG{n}{state}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{piece\PYGZus{}count}\PYG{p}{),}
+\PYG{+w}{                        }\PYG{n}{EvalFunction}::\PYG{n}{PieceValue}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{run\PYGZus{}engine\PYGZus{}thread}\PYG{p}{(}\PYG{n}{state}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{piece\PYGZus{}value}\PYG{p}{),}
+\PYG{+w}{                        }\PYG{n}{EvalFunction}::\PYG{n}{Attacks}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{run\PYGZus{}engine\PYGZus{}thread}\PYG{p}{(}\PYG{n}{state}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{attacks}\PYG{p}{),}
+\PYG{+w}{                        }\PYG{n}{EvalFunction}::\PYG{n}{AttacksDiff}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{run\PYGZus{}engine\PYGZus{}thread}\PYG{p}{(}\PYG{n}{state}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{attacks\PYGZus{}diff}\PYG{p}{),}
+\PYG{+w}{                        }\PYG{n}{EvalFunction}::\PYG{n}{PieceTables}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{run\PYGZus{}engine\PYGZus{}thread}\PYG{p}{(}\PYG{n}{state}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{piece\PYGZus{}tables}\PYG{p}{),}
+\PYG{+w}{                        }\PYG{n}{EvalFunction}::\PYG{n}{Combined}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{run\PYGZus{}engine\PYGZus{}thread}\PYG{p}{(}\PYG{n}{state}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{combined}\PYG{p}{),}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Id}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{o}{..}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{UciOk}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{ReadyOk}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{BestMove}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{o}{..}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{CopyProtection}\PYG{p}{(}\PYG{n}{\PYGZus{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Registration}\PYG{p}{(}\PYG{n}{\PYGZus{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n+nb}{Option}\PYG{p}{(}\PYG{n}{\PYGZus{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Info}\PYG{p}{(}\PYG{n}{\PYGZus{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{                }\PYG{n}{UciMessage}::\PYG{n}{Unknown}\PYG{p}{(}\PYG{n}{\PYGZus{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

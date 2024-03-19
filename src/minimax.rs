@@ -136,21 +136,7 @@ where
         }
     }
 }
-/*
-function negamax(node, depth, α, β, color) is
-    if depth = 0 or node is a terminal node then
-        return color × the heuristic value of node
 
-    childNodes := generateMoves(node)
-    childNodes := orderMoves(childNodes)
-    value := −∞
-    foreach child in childNodes do
-        value := max(value, −negamax(child, depth − 1, −β, −α, −color))
-        α := max(α, value)
-        if α ≥ β then
-            break (* cut-off *)
-    return value
- */
 const DRAW_VALUE: f32 = f32::MIN;
 
 pub fn negamax<F>(game: Game, depth: i32, evaluation_function: F) -> f32
